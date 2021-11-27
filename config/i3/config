@@ -51,7 +51,8 @@
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $mod Mod4
-set $term alacritty
+#set $term alacritty
+set $term wezterm
 set $ws1 "1: Main"
 set $ws2 "2: Media"
 set $ws3 "3: Folders"
@@ -370,6 +371,7 @@ bindsym Print exec "scrot ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png"
 bindsym $mod+Shift+d exec discord
 bindsym $mod+d exec dmenu
 bindsym $mod+t exec $term -e btop
+bindsym $mod+Ctrl+t exec $term -e ranger
 bindsym $mod+m exec mpv $(xclip -o -selection clipboard) 
 bindsym $mod+Shift+m exec virt-manager
 
@@ -409,6 +411,7 @@ workspace $ws11 output $mo2
 # bind program to workspace and focus to them on startup:
 assign [class="Xfce4-terminal"] $ws4
 assign [class="Alacritty"] $ws4
+assign [class="(?i)wezterm"] $ws4
 assign [class="firefox"] $ws2
 assign [class="LibreWolf"] $ws1
 assign [class="Thunar"] $ws3
