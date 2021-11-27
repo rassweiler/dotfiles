@@ -34,9 +34,9 @@
         glob: true
         path: config/**
         exclude: [ config/Code ]
-    ~/.config/CODE - OSS/*: 
+    ~/.config/Code - OSS/User/settings.json: 
         glob: true
-        path: config/Code/**
+        path: config/Code/User/settings.json
     #~/.config/alacritty/: config/alacritty/**
     #~/.config/alacritty/: config/alacritty/**
 
