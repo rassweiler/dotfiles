@@ -1,0 +1,38 @@
+import:
+  - ./dracula.yml
+
+# Opacity for Alacritty
+background_opacity: 0.75
+
+# Font Configuration (Changes require restart)
+font:
+  normal:
+    family: Victor Mono
+    style: Regular
+  italic:
+    family: Victor Mono
+    style: Italic
+  bold:
+    family: Victor Mono
+    style: Bold
+
+  size: 10
+# Padding Settings
+env:
+  TERM: xterm-256color
+
+draw_bold_text_with_bright_colors: true
+
+window:
+  padding:
+    x: 0
+    y: 0
+  gtk_theme_variant: dark
+  decorations: full
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+shell:
+  program: /bin/fish

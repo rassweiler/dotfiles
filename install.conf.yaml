@@ -1,0 +1,44 @@
+# KR Arch Configs
+
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+
+- clean: ['~', '~/.config']
+
+- link:
+    #Home
+    #~/.tmux.conf: tmux.conf
+    #~/.vim: vim
+    #~/.vimrc: vimrc
+    ~/.Xresources: Xresources
+    ~/.bashrc: bashrc
+    ~/.gitconfig: gitconfig
+    ~/.profile: profile
+    ~/.librewolf/librewolf.overrides.cfg: librewolf.overrides.cfg
+    ~/.screenlayout/monitor.sh: screenlayout/monitor.sh
+    
+    #Local
+    ~/.local/share/: 
+        glob: true
+        path: local/share/**
+    #~/.local/share/backgrounds/: local/share/backgrounds/**
+    #~/.local/share/icons/: local/share/icons/**
+    #~/.local/share/fonts/: local/share/fonts/**
+    #~/.local/share/themes/: local/share/themes/**
+    
+    #Config
+    ~/.config/: 
+        glob: true
+        path: config/**
+        exclude: [ config/Code ]
+    ~/.config/CODE - OSS/*: 
+        glob: true
+        path: config/Code/**
+    #~/.config/alacritty/: config/alacritty/**
+    #~/.config/alacritty/: config/alacritty/**
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
