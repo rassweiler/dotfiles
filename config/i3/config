@@ -362,9 +362,9 @@ bindsym $mod+p exec /usr/local/bin/switch-audio-port
 
 ## App shortcuts
 #bindsym $mod+w exec /usr/bin/firefox
-bindsym $mod+w exec /usr/bin/libreWolf
+bindsym $mod+w exec /usr/bin/librewolf
 #bindsym $mod+Shift+w exec /usr/bin/firefox --args -private-window
-bindsym $mod+Shift+w exec /usr/bin/libreWolf --args -private-window
+bindsym $mod+Shift+w exec /usr/bin/librewolf --args -private-window
 bindsym $mod+Shift+v exec virt-manager
 bindsym $mod+n exec /usr/bin/thunar
 bindsym Print exec "scrot ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png"
@@ -437,8 +437,9 @@ assign [class="kdenlive"] $ws12
 # automatic set focus new window if it opens on another workspace then the current:
 for_window [class=Xfce4-terminal] focus
 for_window [class=Alacritty] focus
-for_window [class=(?i)firefox] focus
-for_window [class=(?i)LibreWolf] focus
+for_window [class="(?i)wezterm"] focus
+#for_window [class=(?i)firefox] focus
+#for_window [class=(?i)LibreWolf] focus
 for_window [class=Thunar] focus
 for_window [class=Thunderbird] focus
 for_window [class=TelegramDesktop] focus
@@ -544,7 +545,7 @@ exec --no-startup-id sleep 1 && streamdeck
 # Start i3bar to display a workspace bar 
 # (plus the system information i3status finds out, if available)
 bar {
-		font pango:Victor Mono Regular 12, FontAwesome 12
+		font pango:Victor Mono Bold 12, FontAwesome 12
 		status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	    	position top 
 #	    	i3bar_command i3bar --transparency
@@ -564,16 +565,16 @@ bar {
         background #282A36
         statusline #F8F8F2
         separator  #44475A
-        focused_workspace  #44475A #44475A #F8F8F2
-        active_workspace   #282A36 #44475A #F8F8F2
+        focused_workspace  #44475A #bd93f9 #F8F8F2
+        active_workspace   #282A36 #bd93f9 #F8F8F2
         inactive_workspace #282A36 #282A36 #BFBFBF
-        urgent_workspace   #FF5555 #FF5555 #F8F8F2
-        binding_mode       #FF5555 #FF5555 #F8F8F2
+        urgent_workspace   #8be9fd #ff79c6 #F8F8F2
+        binding_mode       #8be9fd #ff79c6 #F8F8F2
 	}
 }
 
 bar {
-		font pango:Victor Mono Regular 10, FontAwesome 10
+		font pango:Victor Mono Bold 10, FontAwesome 10
         position top 
         tray_output $mo1
         tray_padding 0
@@ -585,10 +586,10 @@ bar {
         background #282A36
         statusline #F8F8F2
         separator  #44475A
-        focused_workspace  #44475A #44475A #F8F8F2
-        active_workspace   #282A36 #44475A #F8F8F2
+        focused_workspace  #44475A #bd93f9 #F8F8F2
+        active_workspace   #282A36 #bd93f9 #F8F8F2
         inactive_workspace #282A36 #282A36 #BFBFBF
-        urgent_workspace   #FF5555 #FF5555 #F8F8F2
-        binding_mode       #FF5555 #FF5555 #F8F8F2
+        urgent_workspace   #8be9fd #ff79c6 #F8F8F2
+        binding_mode       #8be9fd #ff79c6 #F8F8F2
 	}
 }
