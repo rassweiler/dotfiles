@@ -363,8 +363,8 @@ bindsym $mod+p exec /usr/local/bin/switch-audio-port
 ## App shortcuts
 #bindsym $mod+w exec /usr/bin/firefox
 bindsym $mod+w exec /usr/bin/librewolf
-#bindsym $mod+Shift+w exec /usr/bin/firefox --args -private-window
-bindsym $mod+Shift+w exec /usr/bin/librewolf --args -private-window
+bindsym $mod+Shift+w exec /usr/bin/firefox --args -private-window
+#bindsym $mod+Shift+w exec /usr/bin/librewolf --args -private-window
 bindsym $mod+Shift+v exec virt-manager
 bindsym $mod+n exec /usr/bin/thunar
 bindsym Print exec "scrot ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png"
@@ -528,7 +528,7 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 #exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 #exec --no-startup-id sleep 3 && thunar
 exec --no-startup-id sleep 1 && firefox #Media
-exec --no-startup-id sleep 1 && libreWolf #Browsing
+exec --no-startup-id sleep 1 && librewolf #Browsing
 
 exec --no-startup-id sleep 10 && nextcloud
 
