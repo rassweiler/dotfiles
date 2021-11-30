@@ -3,23 +3,24 @@
  * Maintainer: joekamprad <joekamprad@endeavouros.com>
  *******************************************************/
 configuration {
-    font:                           "Sourcecode Pro Regular 10";
+    font:                           "Victor Mono Regular 12";
     show-icons:                     false;
-    icon-theme: 		    "Arc-X-D";
+    icon-theme: 		    "Dracula";
     scroll-method:                  0;
     disable-history:                false;
     sidebar-mode: 		    false;
 }
 
-@import "~/.config/rofi/arc_dark_transparent_colors.rasi"
+/*@import "~/.config/rofi/arc_dark_transparent_colors.rasi"*/
+@import "~/.config/rofi/Dracula/Dracula-Custom.rasi"
 
 window {
     background-color:               @background;
-    border:                         0;
+    border:                         1;
     padding:                        10;
     transparency:                   "real";
     width:                          120px;
-    location:                       east;
+    /*location:                       east;*/
 /*y-offset:                       18;*/
 /*x-offset:	                    850;*/
     transparency:                   "real";
@@ -89,8 +90,8 @@ button {
     text-color: @normal-foreground;
 }
 button.selected {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
 }
 inputbar {
     spacing:    0;

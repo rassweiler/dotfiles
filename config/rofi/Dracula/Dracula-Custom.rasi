@@ -12,17 +12,17 @@
     drac-red: #ff5555;
     drac-yel: #f1fa8c;
 
-    foreground: @drac-fgd;
+    foreground: @drac-grn;
     background: @drac-bgd;
     active-background: @drac-pnk;
     urgent-background: @drac-red;
-    selected-background: @active-background;
+    selected-background: @drac-pnk;
     selected-urgent-background: @urgent-background;
     selected-active-background: @active-background;
-    separatorcolor: @active-background;
-    bordercolor: #6272a4;
-
-    selected-normal-foreground:  rgba ( 255, 147, 5, 100 % );
+    separatorcolor: @drac-pur;
+    bordercolor: @drac-pur;
+    border-color: @drac-pur;
+    selected-normal-foreground:  @drac-fgd;
     normal-foreground:           @foreground;
     alternate-normal-background: rgba ( 45, 48, 59, 1 % );
     red:                         rgba ( 220, 50, 47, 100 % );
@@ -30,15 +30,14 @@
     blue:                        rgba ( 38, 139, 210, 100 % );
     urgent-foreground:           rgba ( 204, 102, 102, 100 % );
     alternate-urgent-background: rgba ( 75, 81, 96, 90 % );
-    active-foreground:           rgba ( 101, 172, 255, 100 % );
+    active-foreground:           @drac-pnk;
     lightbg:                     rgba ( 238, 232, 213, 100 % );
     selected-active-foreground:  rgba ( 249, 249, 249, 100 % );
     alternate-active-background: rgba ( 45, 48, 59, 88 % );
     alternate-normal-foreground: @foreground;
-    normal-background:           rgba ( 45, 48, 59, 1 % );
+    normal-background:           @background;
     lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  rgba ( 24, 26, 32, 100 % );
-    border-color:                rgba ( 124, 131, 137, 100 % );
+    selected-normal-background:  @drac-pur;
     spacing:                     2;
     alternate-urgent-foreground: @urgent-foreground;
     background-color:            rgba ( 0, 0, 0, 0 % );
