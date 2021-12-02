@@ -573,6 +573,7 @@ bar {
 	}
 }
 
+# Secondary Monitor Bar
 bar {
 		font pango:Victor Mono Bold 10, FontAwesome 10
         position top 
