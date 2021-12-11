@@ -8,6 +8,10 @@
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
     "editor.tabSize": 3,
-    "editor.insertSpaces": false
+    "editor.insertSpaces": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 
 }

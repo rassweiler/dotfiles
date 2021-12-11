@@ -53,6 +53,7 @@
 set $mod Mod4
 #set $term alacritty
 set $term wezterm
+set $browser librewolf
 set $ws1 "1: Main"
 set $ws2 "2: Media"
 set $ws3 "3: Folders"
@@ -95,10 +96,17 @@ set $yellowbrown	#e1b700
 
 # define colors for windows:
 #class		        	border		bground		text		indicator	child_border
-client.focused		    $lightblue	$darkblue	$white		$purple		$mediumgrey
-client.unfocused	    $darkblue	$darkblue	$grey		$purple		$darkgrey
-client.focused_inactive	$darkblue	$darkblue	$grey		$purple		$black
-client.urgent		    $urgentred	$urgentred	$white		$purple		$yellowbrown
+# client.focused		    $lightblue	$darkblue	$white		$purple		$mediumgrey
+# client.unfocused	    $darkblue	$darkblue	$grey		$purple		$darkgrey
+# client.focused_inactive	$darkblue	$darkblue	$grey		$purple		$black
+# client.urgent		    $urgentred	$urgentred	$white		$purple		$yellowbrown
+
+client.focused          #6272A4 #6272A4 #F8F8F2 $purple   #6272A4
+client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
+client.background       #F8F8F2
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -362,18 +370,20 @@ bindsym $mod+p exec /usr/local/bin/switch-audio-port
 
 ## App shortcuts
 #bindsym $mod+w exec /usr/bin/firefox
-bindsym $mod+w exec /usr/bin/librewolf
+bindsym $mod+w exec $browser
 bindsym $mod+Shift+w exec /usr/bin/firefox --args -private-window
 #bindsym $mod+Shift+w exec /usr/bin/librewolf --args -private-window
 bindsym $mod+Shift+v exec virt-manager
 bindsym $mod+n exec /usr/bin/thunar
 bindsym Print exec "scrot ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png"
 bindsym $mod+Shift+d exec discord
-bindsym $mod+d exec dmenu
-bindsym $mod+t exec $term -e btop
-bindsym $mod+Ctrl+t exec $term -e ranger
+#bindsym $mod+d exec dmenu
+bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'monospace-10' -p 'dmenu%'"
+bindsym $mod+t exec $term start -- btop
+bindsym $mod+Ctrl+t exec $term start -- ranger
 bindsym $mod+m exec mpv $(xclip -o -selection clipboard) 
 bindsym $mod+Shift+m exec virt-manager
+#bindsym $mod+Shift+Space exec $term -e ranger
 
 ## rofi bindings fancy application menu (two bindings F9/$mod+d)
 bindsym $mod+space exec rofi -modi drun -show drun \
@@ -425,6 +435,7 @@ assign [class="Nextcloud"] $ws1
 assign [class="mpv"] $ws2
 assign [class="virt-manager"] $ws5
 assign [class="Steam"] $ws7
+assign [class="Lutris"] $ws7
 assign [class="code-oss"] $ws8
 assign [class="Godot"] $ws8
 assign [class="obs"] $ws10
@@ -433,6 +444,7 @@ assign [class="Inkscape"] $ws9
 assign [class="(?i)gimp-"] $ws9
 assign [class="Tenacity"] $ws12
 assign [class="kdenlive"] $ws12
+assign [class="Jellyfin Media Player"] $ws2
 
 # automatic set focus new window if it opens on another workspace then the current:
 for_window [class=Xfce4-terminal] focus
@@ -444,12 +456,10 @@ for_window [class=Thunar] focus
 for_window [class=Thunderbird] focus
 for_window [class=TelegramDesktop] focus
 
-# set floating (nontiling)for apps needing it
+# Floating
 for_window [class="Yad" instance="yad"] floating enable
 for_window [class="Galculator" instance="galculator"] floating enable
 for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
-
-#set floating (nontiling) for special apps
 for_window [class="Xsane" instance="xsane"] floating enable
 #for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
 for_window [class="qt5ct" instance="qt5ct"] floating enable
@@ -459,10 +469,11 @@ for_window [class="Pamac-manager"] floating enable
 for_window [class="etcher"] floating disable
 for_window [class="Nextcloud"] floating disable
 for_window [class="Steam"] floating disable
+for_window [class="Lutris"] floating disable
 for_window [class="Godot_Engine"] floating enable
 for_window [class="virt-manager"] floating disable
 
-# Browsers
+# Move To WS
 for_window [class="firefox" title=".*\(Private Browsing\).*"] move to workspace $ws6
 for_window [class="firefox" title=".*Youtube.*"] move to workspace $ws2
 for_window [class="firefox" title=".*Jellyfin.*"] move to workspace $ws2
@@ -471,6 +482,9 @@ for_window [class="LibreWolf" title=".*\(Private Browsing\).*"] move to workspac
 for_window [class="LibreWolf" title=".*Youtube.*"] move to workspace $ws2
 for_window [class="LibreWolf" title=".*Jellyfin.*"] move to workspace $ws2
 for_window [class="LibreWolf" title=".*Odysee.*"] move to workspace $ws2
+
+#Layout
+for_window [class="Jellyfin Media Player"] layout tabbed
 
 
 #========================================================================================================================================
@@ -488,51 +502,39 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # when second to i3 a DE is installed or mixed usage of i3 + xfce4 or GNOME
 # in this cases better disable dex and use manual starting apps using xdg/autostart
 exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
-
 # num lock activated
 exec --no-startup-id sleep 10 && numlockx on
-
 # start conky: 
 exec --no-startup-id conky
-
 # start a script to setup displays
 # uncomment the next line, use arandr to setup displays and save the file as monitor:
 exec --no-startup-id ~/.screenlayout/monitor.sh
-
 # start autotiling
 exec_always --no-startup-id autotiling -w 1 3 4 5 6 7 8 9
-
 # start blueberry app for managing bluetooth devices from tray:
 exec --no-startup-id blueberry-tray
-
 #transparency 
 #exec --no-startup-id xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
 exec --no-startup-id picom -CGb
-
 #networkmanager-applet
 exec --no-startup-id nm-applet
-
 # set wallpaper
 #exec --no-startup-id nitrogen --restore
 #exec --no-startup-id feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros_i3.png
 exec_always feh --bg-scale --randomize ~/.local/share/backgrounds/
-
 #set powersavings for display:
 #exec --no-startup-id xset s 480 dpms 600 600 600
 exec --no-startup-id xset s off
 # Desktop notifications
 exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
-
-# Autostart apps as you like
 #exec --no-startup-id sleep 2 && $term
 #exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 #exec --no-startup-id sleep 3 && thunar
 exec --no-startup-id sleep 1 && firefox #Media
+exec --no-startup-id sleep 1 && jellyfinmediaplayer #Media
 exec --no-startup-id sleep 1 && librewolf #Browsing
-
-exec --no-startup-id sleep 10 && nextcloud
-
-exec --no-startup-id sleep 1 && streamdeck
+exec --no-startup-id sleep 5 && nextcloud
+#exec --no-startup-id sleep 1 && streamdeck
 
 
 #========================================================================================================================================
@@ -553,33 +555,11 @@ bar {
 # reference: https://i3wm.org/docs/userguide.html#_tray_output
 		    tray_output $mo1
 		    tray_padding 0
-        output $mo1
+        #output $mo1
 
 # When strip_workspace_numbers is set to yes, 
 # any workspace that has a name of the form 
 # “[n][:][NAME]” will display only the name.
-    strip_workspace_numbers yes
-    #strip_workspace_name no
-
-    colors {
-        background #282A36
-        statusline #F8F8F2
-        separator  #44475A
-        focused_workspace  #44475A #bd93f9 #F8F8F2
-        active_workspace   #282A36 #bd93f9 #F8F8F2
-        inactive_workspace #282A36 #282A36 #BFBFBF
-        urgent_workspace   #8be9fd #ff79c6 #F8F8F2
-        binding_mode       #8be9fd #ff79c6 #F8F8F2
-	}
-}
-
-# Secondary Monitor Bar
-bar {
-		font pango:Victor Mono Bold 10, FontAwesome 10
-        position top 
-        tray_output $mo1
-        tray_padding 0
-        output $mo2
     strip_workspace_numbers yes
     #strip_workspace_name no
 
