@@ -1,3 +1,4 @@
 ibus-daemon -d -x
 export EDITOR=/usr/bin/micro
-export TERM=alacritty
+export TERM=wezterm
+export TerminalEmulator=wezterm

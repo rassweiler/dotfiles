@@ -16,10 +16,10 @@ configuration {
 
 window {
     background-color:               @background;
-    border:                         1;
-    padding:                        10;
+    border:                         2;
+    padding:                        15;
     transparency:                   "real";
-    width:                          120px;
+    width:                          200px;
     /*location:                       east;*/
 /*y-offset:                       18;*/
 /*x-offset:	                    850;*/
