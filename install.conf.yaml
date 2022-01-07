@@ -11,8 +11,8 @@
 - link:
     #Home
     #~/.tmux.conf: tmux.conf
-    #~/.vim: vim
-    #~/.vimrc: vimrc
+    ~/.vim: vim
+    ~/.vimrc: vimrc
     ~/.Xresources: Xresources
     ~/.bashrc: bashrc
     ~/.gitconfig: gitconfig
@@ -37,6 +37,10 @@
     ~/.config/Code - OSS/User/settings.json: 
         glob: true
         path: config/Code/User/settings.json
+    #FreeCAD
+    ~/.FreeCAD/: 
+        glob: true
+        path: FreeCAD/**
     #~/.config/alacritty/: config/alacritty/**
     #~/.config/alacritty/: config/alacritty/**
 

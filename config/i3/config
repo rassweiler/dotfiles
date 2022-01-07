@@ -1,43 +1,27 @@
-#
-#              //||||||||||||||||||||||||||||||||||||||||||||||||||//
-#           /||||||||||||||||||||||||||||||||||||||||||||||||||||||||||/
-#         \||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\
-#       \||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\
-#     /||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||/
-#    /||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||/
-#    ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-#   ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-#   |||||############||||||||||||||###############################||||||||||||||
-#  /|||||||############||||||||||||###################################||||||||||/
-#  /|||||||||############||||||||||####################################|||||||||/
-#  /||||||||||#############||||||||#####################################||||||||/
-#  /||||||||||||############|||||||#################||||||||#############|||||||/
-#  /||||||||||||||############|||||#################||||||||||###########|||||||/
-#  /||||||||||||||||############|||#################||||||||||###########|||||||/
-#  /||||||||||||||||||##############################||||||||||###########|||||||/
-#  /||||||||||||||||||||############################||||||||||##########||||||||/
-#  /|||||||||||||||||||||############################||||||############|||||||||/
-#  /|||||||||||||||||||||||###########################################||||||||||/
-#  /|||||||||||||||||||||##########################################|||||||||||||/
-#  /|||||||||||||||||||#############################################||||||||||||/
-#  /|||||||||||||||||#################################################||||||||||/
-#  /||||||||||||||||#############||#################|||||||############|||||||||/
-#  /||||||||||||||#############||||#################|||||||||###########||||||||/
-#  /||||||||||||#############||||||#################||||||||||###########|||||||/
-#  /||||||||||#############||||||||#################|||||||||||###########||||||/
-#  /||||||||##############|||||||||#################||||||||||||###########|||||/
-#  /|||||||#############|||||||||||#################|||||||||||||###########||||/
-#  /|||||#############|||||||||||||#################||||||||||||||###########|||/
-#   |||#############|||||||||||||||#################||||||||||||||############||
-#   ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-#    ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-#    /||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||/
-#     /||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||/
-#       \||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\
-#         \||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\
-#           /||||||||||||||||||||||||||||||||||||||||||||||||||||||||||/
-#              //||||||||||||||||||||||||||||||||||||||||||||||||||//
-#
+#     ,^vfFIIIIIIIIIIIIIIIIIIIIIIFfv/,        
+#      ;z0WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW&n;     
+#    ;SWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWK;   
+#   1WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW[  
+#  rWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWr 
+# `BWMF11111*#WWWWWWWR11111111111111*vxC#MWWWWWWB`
+# ;WWWWC,     <0WWWWWb                   `=BWWWWW;
+# ;WWWWWMf`    `?NWWWb          ',,'       -BWWWW;
+# ;WWWWWWWBv     .xMWb          RWWWWO`     nWWWW;
+# ;WWWWWWWWW0=     ,CP          RWWWWW<     zWWWW;
+# ;WWWWWWWWWWWK~     `          RWWWW&'    'BWWWW;
+# ;WWWWWWWWWWWWWA               ;!!~-     /BWWWWW;
+# ;WWWWWWWWWWWMy'                       ;KWWWWWWW;
+# ;WWWWWWWWWWp:     `!          ^r=~      1MWWWWW;
+# ;WWWWWWWWR~      *Bb          RWWWB^     ~MWWWW;
+# ;WWWWWWB=      /RWWb          RWWWWM~     !MWWW;
+# ;WWWWNv`     ;OWWWWb          RWWWWWN;     <WWW;
+# ;WWMz`     -PWWWWWWb          RWWWWWWB:     JWW;
+# `BMi111111FMWWWWWWWR1111111111BWWWWWWW&111111RB`
+#  *WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW* 
+#   vWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWx  
+#    ~KWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWR~   
+#      ~I&WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWBI~     
+#         ,^vfFIIIIIIIIIIIIIIIIIIIIIIFfv/,     
 
 # iconic font icon search: https://fontawesome.com/v5/cheatsheet
 
@@ -101,7 +85,7 @@ set $yellowbrown	#e1b700
 # client.focused_inactive	$darkblue	$darkblue	$grey		$purple		$black
 # client.urgent		    $urgentred	$urgentred	$white		$purple		$yellowbrown
 
-client.focused          #6272A4 #6272A4 #F8F8F2 $purple   #6272A4
+client.focused          #50fa7b #6272A4 #F8F8F2 $purple   #6272A4
 client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
 client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
 client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
@@ -127,7 +111,7 @@ workspace_layout default
 #workspace_layout tabbed
 
 #border indicator on windows: 
-new_window pixel 1
+new_window pixel 2
 
 # thin borders
 # hide_edge_borders both
@@ -374,7 +358,7 @@ bindsym $mod+w exec $browser
 bindsym $mod+Shift+w exec /usr/bin/firefox --args -private-window
 #bindsym $mod+Shift+w exec /usr/bin/librewolf --args -private-window
 bindsym $mod+Shift+v exec virt-manager
-bindsym $mod+n exec /usr/bin/thunar
+bindsym $mod+Shift+Return exec /usr/bin/thunar
 bindsym Print exec "scrot ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png"
 bindsym $mod+Shift+d exec discord
 #bindsym $mod+d exec dmenu
@@ -503,14 +487,14 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # in this cases better disable dex and use manual starting apps using xdg/autostart
 exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
 # num lock activated
-exec --no-startup-id sleep 10 && numlockx on
+exec --no-startup-id sleep 5 && numlockx on
 # start conky: 
 exec --no-startup-id conky
 # start a script to setup displays
 # uncomment the next line, use arandr to setup displays and save the file as monitor:
 exec --no-startup-id ~/.screenlayout/monitor.sh
 # start autotiling
-exec_always --no-startup-id autotiling -w 1 3 4 5 6 7 8 9
+exec_always --no-startup-id autotiling -w 1 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
 # start blueberry app for managing bluetooth devices from tray:
 exec --no-startup-id blueberry-tray
 #transparency 
