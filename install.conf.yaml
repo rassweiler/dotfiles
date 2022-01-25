@@ -18,7 +18,7 @@
     ~/.gitconfig: gitconfig
     ~/.profile: profile
     ~/.librewolf/librewolf.overrides.cfg: librewolf.overrides.cfg
-    ~/.screenlayout/monitor.sh: screenlayout/monitor.sh
+    #~/.screenlayout/monitor.sh: screenlayout/monitor.sh
     
     #Local
     ~/.local/share/: 
