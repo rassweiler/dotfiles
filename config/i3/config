@@ -497,7 +497,7 @@ exec --no-startup-id conky
 exec --no-startup-id ~/.screenlayout/monitor.sh
 # set powersavings for display:
 # exec --no-startup-id xset s 480 dpms 600 600 600
-exec_always --no-startup-id sleep 1; xset s off dpms
+exec_always --no-startup-id sleep 1; xset s off -dpms
 # start blueberry app for managing bluetooth devices from tray:
 exec --no-startup-id blueberry-tray
 # transparency 
