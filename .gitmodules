@@ -4,4 +4,4 @@
 	ignore = dirty
 [submodule "vim/pack/themes/start/dracula"]
 	path = vim/pack/themes/start/dracula
-	url = git@github.com:dracula/vim.git
+	url = https://github.com/dracula/vim.git
