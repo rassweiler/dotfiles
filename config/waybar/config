@@ -2,7 +2,7 @@
 	"layer": "top",
 	"position": "top",
 	"modules-left": ["sway/workspaces","custom/media"],
-	"modules-right": ["custom/pacman","temperature","custom/keyboard", "network", "battery", "pulseaudio", "clock", "custom/quit"],
+	"modules-right": ["custom/pacman","temperature", "cpu","custom/keyboard", "network", "battery", "pulseaudio", "clock", "custom/quit"],
 	"sway/workspaces": {
 		"disable-scroll": true,
 		"all-outputs": false,
@@ -30,6 +30,14 @@
 		 "format-alt": "{:%a %b %d}",
 		 "tooltip": false
 	},
+	"cpu": {
+		"interval": "1",      
+		"format": "  {max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
+		"max-length": 13,
+		"min-length": 13,
+		"on-click": "wezterm -e 'btop --sort-key PERCENT_CPU'",
+		"tooltip": false
+  },
 	"custom/pacman": {
 		"format": "<big>􏆲</big>  {}",
 		"interval": 3600,                     // every hour
@@ -71,7 +79,7 @@
 		 "format-ethernet": " {ifname}: {ipaddr}",
 		 "format-disconnected": "",
 		 "tooltip-format-wifi": "{signalStrength}%",
-		 "max-length": 20
+		 "max-length": 30
 	},
 	"custom/media": {
 		 "format": "{}",
