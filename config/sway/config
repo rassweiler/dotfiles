@@ -497,11 +497,6 @@ output * bg $HOME/.local/share/backgrounds/Dracula_arch.png fit
 # set powersavings for display:
 # exec --no-startup-id xset s 480 dpms 600 600 600
 exec_always --no-startup-id sleep 1; xset s off -dpms
-# start blueberry app for managing bluetooth devices from tray:
-exec --no-startup-id blueberry-tray
-# transparency 
-# exec --no-startup-id xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
-exec --no-startup-id picom -CGb
 # networkmanager-applet
 exec --no-startup-id nm-applet
 
@@ -528,7 +523,7 @@ exec --no-startup-id sleep 5 && nextcloud
 bar {
 		font pango:Victor Mono Bold 12, FontAwesome 14
 	    	position top 
-	    	swaybar_command waybar --transparency
+	    	swaybar_command waybar
 		    tray_output $mo1
 		    tray_padding 1
         #output $mo1

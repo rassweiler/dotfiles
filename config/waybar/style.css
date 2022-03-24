@@ -1,12 +1,21 @@
 * {
-	font-size: 12px;
+	font-size: 14px;
 	font-family: "Victor Mono";
  }
  
  window#waybar {
-	  background: rgba(0,0,0,0);
+	  background: rgba(0,0,0,0); 
+}
+
+ #workspaces {
+   background: #1d1f21;
+	color: #c5c8c6;
+	padding: 5px 5px 5px 7px;
+	margin: 3px 0px 3px 3px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
  }
- 
+
  #battery {
 	margin: 3px 0px 3px 0px;
 	background: #1d1f21;
@@ -60,13 +69,6 @@
 	border-bottom-right-radius: 10px;
 	color: #c5c8c6;
  }
-
- #custom-network {
-	background: #1d1f21;
-	color: #c5c8c6;
-	margin: 3px 0px 3px 0px;
-	padding: 5px;
- }
  
  #network {
 	background: #1d1f21;
@@ -74,4 +76,4 @@
 	margin: 3px 0px 3px 0px;
 	padding: 5px;
  }
-
+ 
