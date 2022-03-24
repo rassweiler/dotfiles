@@ -4,26 +4,28 @@
     "height": 24, // Waybar height
     // "width": 1366, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "custom/spotify"],
+    //"modules-left": ["sway/workspaces", "sway/mode", "custom/spotify"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "tray", "clock"],
-    "sway/workspaces": {
+    //"modules-right": ["pulseaudio", "network", "temperature", "cpu", "memory", "battery", "tray", "clock"],
+    "modules-left": ["custom/media"],
+    "modules-right": ["custom/keyboard", "custom/network", "battery", "pulseaudio", "clock", "custom/quit"],
+	 "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
-        "format": "{icon}",
+        "format": "{name}",
         "format-icons": {
-				"1":" Main",
-				"2":" Media",
-				"3":" Folders",
-				"4":" Terminal",
-				"5":" VM",
-				"6":" Private",
-				"7":" Gaming",
-				"8":" Coding",
-				"9":" Art",
-				"10":" OBS",
-				"11":" Comms",
-				"12":" Editing",
+            "1":" Main",
+            "2":" Media",
+            "3":" Folders",
+            "4":" Terminal",
+            "5":" VM",
+            "6":" Private",
+            "7":" Gaming",
+            "8":" Coding",
+            "9":" Art",
+            "10":" OBS",
+            "11":" Comms",
+            "12":" Editing",
             "urgent": "",
             "focused": "",
             "default": ""
@@ -63,6 +65,14 @@
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-disconnected": "Disconnected ⚠"
     },
+	 "custom/network": {
+		"format": "{ifname}",
+		"format-wifi": " {essid}",
+		"format-ethernet": " {ifname}",
+		"format-disconnected": "",
+		"tooltip-format-wifi": "{signalStrength}%",
+		"max-length": 20
+  },
     "pulseaudio": {
         //"scroll-step": 1,
         "format": "{volume}% {icon}",
@@ -85,5 +95,32 @@
         "interval": 30, // Remove this if your script is endless and write in loop
         "exec": "$HOME/.config/waybar/mediaplayer.sh 2> /dev/null", // Script in resources folder
         "exec-if": "pgrep spotify"
+    },
+	 "custom/media": {
+		"format": "{}",
+		"interval": 1,
+		"exec": "$HOME/.config/waybar/get_media.sh"
+  },
+  "custom/keyboard": {
+		"format": " {}",
+		"interval": 1,
+		"exec": "$HOME/.config/waybar/get_kbdlayout.sh"
+  },
+  "custom/quit": {
+   	"format": "",
+	   "on-click": "swaynag -f 'Victor Mono'  -t warning -m 'Do you really want to exit sway?' -b 'Yes, exit sway' 'swaymsg exit'"
+   },
+	 "temperature": {
+      "critical-threshold": 80,
+      "interval": 5,
+      "format": "{icon}  {temperatureC}°C",
+      "format-icons": [
+          "", // Icon: temperature-empty
+          "", // Icon: temperature-quarter
+          "", // Icon: temperature-half
+          "", // Icon: temperature-three-quarters
+          ""  // Icon: temperature-full
+      ],
+      "tooltip": true
     }
 }

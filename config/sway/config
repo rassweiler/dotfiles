@@ -492,8 +492,7 @@ exec --no-startup-id sleep 5 && numlockx on
 exec --no-startup-id conky
 
 output * resolution 1920x1080 position 1920,0
-exec_always feh --bg-fill --randomize ~/.local/share/backgrounds/
-#output * bg #000000 solid_color
+output * bg $HOME/.local/share/backgrounds/Dracula_arch.png fit
 
 # set powersavings for display:
 # exec --no-startup-id xset s 480 dpms 600 600 600
@@ -512,10 +511,10 @@ exec --no-startup-id sleep 1 && firefox #Media
 exec --no-startup-id sleep 1 && jellyfinmediaplayer #Media
 exec --no-startup-id sleep 5 && nextcloud
 
-bar {
-  swaybar_command waybar
-  workspace_buttons yes
-}
+# bar {
+#   swaybar_command waybar
+#   workspace_buttons yes
+# }
 
 #========================================================================================================================================
 #
@@ -524,33 +523,30 @@ bar {
 #========================================================================================================================================
 
 
-# # Start i3bar to display a workspace bar 
-# # (plus the system information i3status finds out, if available)
-# bar {
-# 		font pango:Victor Mono Bold 12, FontAwesome 14
-# 		status_command i3blocks -c ~/.config/sway/i3blocks.conf
-# 	    	position top 
-# #	    	i3bar_command i3bar --transparency
-# # it could be that you have no primary display set: set one (xrandr --output <output> --primary)
-# # reference: https://i3wm.org/docs/userguide.html#_tray_output
-# 		    tray_output $mo1
-# 		    tray_padding 1
-#         #output $mo1
+# Start i3bar to display a workspace bar 
+# (plus the system information i3status finds out, if available)
+bar {
+		font pango:Victor Mono Bold 12, FontAwesome 14
+	    	position top 
+	    	swaybar_command waybar --transparency
+		    tray_output $mo1
+		    tray_padding 1
+        #output $mo1
 
-# # When strip_workspace_numbers is set to yes, 
-# # any workspace that has a name of the form 
-# # “[n][:][NAME]” will display only the name.
-#     strip_workspace_numbers yes
-#     #strip_workspace_name no
+# When strip_workspace_numbers is set to yes, 
+# any workspace that has a name of the form 
+# “[n][:][NAME]” will display only the name.
+    strip_workspace_numbers yes
+    #strip_workspace_name no
 
-#     colors {
-#         background #282A36
-#         statusline #F8F8F2
-#         separator  #44475A
-#         focused_workspace  #44475A #bd93f9 #F8F8F2
-#         active_workspace   #282A36 #bd93f9 #F8F8F2
-#         inactive_workspace #282A36 #282A36 #BFBFBF
-#         urgent_workspace   #8be9fd #ff79c6 #F8F8F2
-#         binding_mode       #8be9fd #ff79c6 #F8F8F2
-# 	}
-# }
+    colors {
+        background #282A36
+        statusline #F8F8F2
+        separator  #44475A
+        focused_workspace  #44475A #bd93f9 #F8F8F2
+        active_workspace   #282A36 #bd93f9 #F8F8F2
+        inactive_workspace #282A36 #282A36 #BFBFBF
+        urgent_workspace   #8be9fd #ff79c6 #F8F8F2
+        binding_mode       #8be9fd #ff79c6 #F8F8F2
+	}
+}
