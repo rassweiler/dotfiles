@@ -25,6 +25,15 @@
 	border-radius: 10px;
 }
 
+#tray > .passive {
+	-gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+	-gtk-icon-effect: highlight;
+	background-color: #db6260;
+}
+
  #workspaces {
    background: #1d1f21;
 	color: #c5c8c6;

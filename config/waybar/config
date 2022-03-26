@@ -35,8 +35,9 @@
 		"exec": "$HOME/.config/waybar/storage.sh"
 	},
 	"tray": {
-		"icon-size": 16
-  }
+		"icon-size": 16,
+		"spacing": 1
+  },
   "memory": {
 		"interval": 5,
 		"format": "Mem {}%"
