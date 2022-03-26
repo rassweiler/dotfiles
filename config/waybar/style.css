@@ -1,10 +1,28 @@
 * {
-	font-size: 14px;
+	font-size: 12px;
 	font-family: "Victor Mono";
  }
  
  window#waybar {
 	  background: rgba(0,0,0,0); 
+}
+
+#window {
+	background: #1d1f21;
+	color: #c5c8c6;
+	padding: 2px;
+	margin: 2px;
+	margin-left: 5px;
+	border-radius: 10px;
+}
+
+#tray {
+	background: #1d1f21;
+	color: #c5c8c6;
+	padding: 2px;
+	margin: 2px;
+	margin-left: 5px;
+	border-radius: 10px;
 }
 
  #workspaces {
@@ -27,7 +45,7 @@
 	opacity: 1;
 }
 
-#temperature {
+#temperature, #memory {
 	margin: 2px;
 	margin-left: 0;
 	margin-right: 0;

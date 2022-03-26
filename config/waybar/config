@@ -2,7 +2,8 @@
 	"layer": "top",
 	"position": "top",
 	"modules-left": ["sway/workspaces","custom/media"],
-	"modules-right": ["custom/pacman","temperature", "cpu","custom/keyboard", "network", "battery", "pulseaudio", "clock", "custom/quit"],
+	"modules-center": ["sway/window"],
+	"modules-right": ["custom/pacman","temperature", "memory", "cpu", "custom/storage","custom/keyboard", "network", "battery", "pulseaudio", "tray", "clock", "custom/quit"],
 	"sway/workspaces": {
 		"disable-scroll": true,
 		"all-outputs": false,
@@ -25,6 +26,21 @@
 			 "default": ""
 		}
   },
+  "custom/storage": {
+		"format": "{} ",
+		"format-alt": "{percentage}% ",
+		"format-alt-click": "click-right",
+		"return-type": "json",
+		"interval": 60,
+		"exec": "$HOME/.config/waybar/storage.sh"
+	},
+	"tray": {
+		"icon-size": 16
+  }
+  "memory": {
+		"interval": 5,
+		"format": "Mem {}%"
+	},
 	"clock": {
 		 "format": "{:%H:%M}",
 		 "format-alt": "{:%a %b %d}",
@@ -33,7 +49,7 @@
 	"cpu": {
 		"interval": "1",      
 		"format": "  {max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
-		"max-length": 13,
+		"max-length": 15,
 		"min-length": 15,
 		"on-click": "wezterm start -- btop",
 		"tooltip": false
@@ -45,8 +61,8 @@
 		"exec-if": "exit 0",                  // always run; consider advanced run conditions
 		"on-click": "wezterm", // update system
 		"signal": 8,
-		"max-length": 5,
-		"min-length": 3
+		"max-length": 6,
+		"min-length": 6
   },
 	"temperature": {
 		//"thermal-zone": 1,
