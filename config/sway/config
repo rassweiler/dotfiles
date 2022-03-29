@@ -37,7 +37,7 @@
 set $mod Mod4
 #set $term alacritty
 set $term wezterm
-set $browser librewolf
+set $browser firefox
 set $ws1 "1: Main"
 set $ws2 "2: Media"
 set $ws3 "3: Folders"
@@ -259,9 +259,6 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-# keybinding list in editor:
-bindsym $mod+F1 exec xed ~/.config/i3/keybindings
-
 # Backlight control
 bindsym XF86MonBrightnessUp exec xbacklight +10
 bindsym XF86MonBrightnessDown exec xbacklight -10
@@ -334,10 +331,8 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+p exec /usr/local/bin/switch-audio-port
 
 ## App shortcuts
-#bindsym $mod+w exec /usr/bin/firefox
 bindsym $mod+w exec $browser
-bindsym $mod+Shift+w exec /usr/bin/firefox --args -private-window
-#bindsym $mod+Shift+w exec /usr/bin/librewolf --args -private-window
+bindsym $mod+Shift+w exec $browser --args -private-window
 bindsym $mod+Shift+v exec virt-manager
 bindsym $mod+Shift+Return exec /usr/bin/thunar
 bindsym Print exec "scrot ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png"
@@ -387,9 +382,9 @@ workspace $ws11 output $mo2
 assign [class="Xfce4-terminal"] $ws4
 assign [class="Alacritty"] $ws4
 assign [class="(?i)wezterm"] $ws4
-assign [class="firefox"] $ws2
+assign [app_id="firefox"] $ws1
 assign [class="LibreWolf"] $ws1
-assign [class="Thunar"] $ws3
+assign [app_id="thunar"] $ws3
 assign [class="(?i)virt-manager"] $ws5
 assign [class="Thunderbird"] $ws4
 assign [class="TelegramDesktop"] $ws11
@@ -415,9 +410,9 @@ assign [class="Jellyfin Media Player"] $ws2
 for_window [class=Xfce4-terminal] focus
 for_window [class=Alacritty] focus
 for_window [class="(?i)wezterm"] focus
-#for_window [class=(?i)firefox] focus
+#for_window [app_id=firefox] focus
 #for_window [class=(?i)LibreWolf] focus
-for_window [class=Thunar] focus
+#for_window [app_id=thunar] focus
 for_window [class=Thunderbird] focus
 for_window [class=TelegramDesktop] focus
 
@@ -439,10 +434,7 @@ for_window [class="Godot_Engine"] floating enable
 for_window [class="virt-manager"] floating disable
 
 # Move To WS
-for_window [class="firefox" title=".*\(Private Browsing\).*"] move to workspace $ws6
-#for_window [class="firefox" title=".*Youtube.*"] move to workspace $ws2
-#for_window [class="firefox" title=".*Jellyfin.*"] move to workspace $ws2
-#for_window [class="firefox" title=".*Odysee.*"] move to workspace $ws2
+for_window [app_id="firefox" title=".*\(Private Browsing\).*"] move to workspace $ws6
 for_window [class="LibreWolf" title=".*\(Private Browsing\).*"] move to workspace $ws6
 #for_window [class="LibreWolf" title=".*Youtube.*"] move to workspace $ws2
 #for_window [class="LibreWolf" title=".*Jellyfin.*"] move to workspace $ws2
@@ -450,6 +442,11 @@ for_window [class="LibreWolf" title=".*\(Private Browsing\).*"] move to workspac
 
 #Layout
 for_window [class="Jellyfin Media Player"] layout tabbed
+for_window [class="Blender"] layout tabbed
+for_window [class="Inkscape"] layout tabbed
+for_window [class="(?i)gimp-"] layout tabbed
+for_window [class="Steam"] layout tabbed
+for_window [class="Lutris"] layout tabbed
 
 
 #========================================================================================================================================
@@ -474,10 +471,6 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
 # num lock activated
 exec --no-startup-id sleep 5 && numlockx on
-# start conky: 
-exec --no-startup-id conky
-# set powersavings for display:
-# exec --no-startup-id xset s 480 dpms 600 600 600
 exec_always --no-startup-id sleep 1; xset s off -dpms
 # networkmanager-applet
 exec --no-startup-id nm-applet
