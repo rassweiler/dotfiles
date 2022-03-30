@@ -126,6 +126,6 @@
 	},
 	"custom/quit": {
 		 "format": "",
-		 "on-click": "swaynag -f 'Terminus (TTF)'  -t warning -m 'Do you really want to shutdown?' -b 'Yes, Shutdown' 'shutdown now'"
+		 "on-click": "wlogout"
 	}
 }

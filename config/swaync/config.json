@@ -1,0 +1,37 @@
+{
+  "$schema": @JSONPATH@,
+  "positionX": "right",
+  "positionY": "top",
+  "control-center-margin-top": 2,
+  "control-center-margin-bottom": 2,
+  "control-center-margin-right": 2,
+  "control-center-margin-left": 2,
+  "timeout": 12,
+  "timeout-low": 7,
+  "timeout-critical": 0,
+  "notification-window-width": 500,
+  "keyboard-shortcuts": true,
+  "image-visibility": "always",
+  "transition-time": 200,
+  "hide-on-clear": false,
+  "hide-on-action": true,
+  "script-fail-notify": true,
+  "scripts": {
+    "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+  }
+}
