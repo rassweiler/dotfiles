@@ -9,23 +9,39 @@
 		"all-outputs": false,
 		"format": "{name}",
 		"format-icons": {
-			 "1":" Main",
-			 "2":" Media",
-			 "3":" Folders",
-			 "4":" Terminal",
-			 "5":" VM",
-			 "6":" Private",
-			 "7":" Gaming",
-			 "8":" Coding",
-			 "9":" Art",
-			 "10":" OBS",
-			 "11":" Comms",
-			 "12":" Editing",
-			 "urgent": "",
-			 "focused": "",
-			 "default": ""
+			"1":" Main",
+			"2":" Media",
+			"3":" Folders",
+			"4":" Terminal",
+			"5":" VM",
+			"6":" Private",
+			"7":" Gaming",
+			"8":" Coding",
+			"9":" Art",
+			"10":" OBS",
+			"11":" Comms",
+			"12":" Editing",
+			"urgent": "",
+			"focused": "",
+			"default": ""
 		}
   },
+	"custom/notification": {
+		"tooltip": false,
+		"format": "{icon}",
+		"format-icons": {
+			"notification": "<span foreground='red'><sup></sup></span>",
+			"none": "",
+			"dnd-notification": "<span foreground='red'><sup></sup></span>",
+			"dnd-none": ""
+		},
+		"return-type": "json",
+		"exec-if": "which swaync-client",
+		"exec": "swaync-client -swb",
+		"on-click": "swaync-client -t -sw",
+		"on-click-right": "swaync-client -d -sw",
+		"escape": true
+	},
   "custom/storage": {
 		"format": "{} ",
 		"format-alt": "{percentage}% ",
@@ -58,9 +74,9 @@
 	"custom/pacman": {
 		"format": "<big>􏆲</big>  {}",
 		"interval": 3600,                     // every hour
-		"exec": "checkupdates | wc -l",       // # of updates
+		"exec": "paru -Qua | wc -l",       // # of updates
 		"exec-if": "exit 0",                  // always run; consider advanced run conditions
-		"on-click": "wezterm", // update system
+		"on-click": "wezterm start -- paru -Syu ", // update system
 		"signal": 8,
 		"max-length": 6,
 		"min-length": 6

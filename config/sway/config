@@ -336,6 +336,7 @@ bindsym $mod+t exec $term start -- btop
 bindsym $mod+Ctrl+t exec $term start -- ranger
 bindsym $mod+m exec mpv $(xclip -o -selection clipboard) 
 bindsym $mod+Shift+m exec virt-manager
+bindsym $mod+Shift+n exec swaync-client -t -sw
 #bindsym $mod+Shift+Space exec $term -e ranger
 
 ## rofi bindings fancy application menu (two bindings F9/$mod+d)
@@ -397,7 +398,7 @@ assign [class="Inkscape"] $ws9
 assign [class="(?i)gimp-"] $ws9
 assign [class="Tenacity"] $ws12
 assign [class="kdenlive"] $ws12
-assign [class="Jellyfin Media Player"] $ws2
+assign [name="Jellyfin Media Player"] $ws2
 
 # automatic set focus new window if it opens on another workspace then the current:
 for_window [class=Xfce4-terminal] focus
@@ -434,7 +435,7 @@ for_window [class="LibreWolf" title=".*\(Private Browsing\).*"] move to workspac
 #for_window [class="LibreWolf" title=".*Odysee.*"] move to workspace $ws2
 
 #Layout
-for_window [class="Jellyfin Media Player"] layout tabbed
+for_window [name="Jellyfin Media Player"] layout tabbed
 for_window [class="Blender"] layout tabbed
 for_window [class="Inkscape"] layout tabbed
 for_window [class="(?i)gimp-"] layout tabbed

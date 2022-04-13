@@ -505,11 +505,6 @@ exec --no-startup-id blueberry-tray
 exec --no-startup-id picom -CGb
 # networkmanager-applet
 exec --no-startup-id nm-applet
-# set wallpaper
-# exec --no-startup-id nitrogen --restore
-# exec --no-startup-id feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros_i3.png
-# exec_always feh --bg-scale --randomize ~/.local/share/backgrounds/
-exec_always feh --bg-fill --randomize ~/.local/share/backgrounds/
 # Desktop notifications
 exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 #exec --no-startup-id sleep 2 && $term
@@ -520,6 +515,11 @@ exec --no-startup-id sleep 1 && jellyfinmediaplayer #Media
 exec --no-startup-id sleep 1 && librewolf #Browsing
 exec --no-startup-id sleep 5 && nextcloud
 #exec --no-startup-id sleep 1 && streamdeck
+# set wallpaper
+# exec --no-startup-id nitrogen --restore
+# exec --no-startup-id feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros_i3.png
+# exec_always feh --bg-scale --randomize ~/.local/share/backgrounds/
+exec_always sleep 5 && feh --bg-fill --randomize ~/.local/share/backgrounds/
 
 
 #========================================================================================================================================

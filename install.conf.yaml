@@ -17,6 +17,8 @@
     ~/.bashrc: bashrc
     ~/.gitconfig: gitconfig
     ~/.profile: profile
+    ~/.icons: icons
+    ~/.themes: themes
     ~/.librewolf/librewolf.overrides.cfg: librewolf.overrides.cfg
     #~/.screenlayout/monitor.sh: screenlayout/monitor.sh
     
