@@ -20,16 +20,11 @@
     ~/.icons: icons
     ~/.themes: themes
     ~/.librewolf/librewolf.overrides.cfg: librewolf.overrides.cfg
-    #~/.screenlayout/monitor.sh: screenlayout/monitor.sh
     
     #Local
     ~/.local/share/: 
         glob: true
         path: local/share/**
-    #~/.local/share/backgrounds/: local/share/backgrounds/**
-    #~/.local/share/icons/: local/share/icons/**
-    #~/.local/share/fonts/: local/share/fonts/**
-    #~/.local/share/themes/: local/share/themes/**
     
     #Config
     ~/.config/: 
@@ -43,8 +38,6 @@
     ~/.FreeCAD/: 
         glob: true
         path: FreeCAD/**
-    #~/.config/alacritty/: config/alacritty/**
-    #~/.config/alacritty/: config/alacritty/**
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

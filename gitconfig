@@ -8,3 +8,7 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[safe]
+	directory = /home/krassweiler/dotfiles/dotbot
+	directory = /home/krassweiler/dotfiles
+	directory = /home/krassweiler/dotfiles/dotbot/lib/pyyaml
