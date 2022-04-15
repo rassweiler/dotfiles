@@ -58,8 +58,8 @@ set $ws17 "17"
 set $ws18 "18"
 set $ws19 "19"
 set $ws20 "20"
-set $mo1 "HDMI-0"
-set $mo2 "HDMI-1"
+set $mo1 "DP-0"
+set $mo2 "DP-0"
 
 ######################################
 # color settings for bar and windows #
@@ -406,7 +406,7 @@ workspace $ws11 output $mo2
 assign [class="Xfce4-terminal"] $ws4
 assign [class="Alacritty"] $ws4
 assign [class="(?i)wezterm"] $ws4
-assign [class="firefox"] $ws2
+assign [class="firefox"] $ws1
 assign [class="LibreWolf"] $ws1
 assign [class="Thunar"] $ws3
 assign [class="(?i)virt-manager"] $ws5
@@ -497,7 +497,8 @@ exec --no-startup-id conky
 exec --no-startup-id ~/.screenlayout/monitor.sh
 # set powersavings for display:
 # exec --no-startup-id xset s 480 dpms 600 600 600
-exec_always --no-startup-id sleep 1; xset s off -dpms
+# exec_always --no-startup-id sleep 1; xset s off -dpms
+exec_always --no-startup-id sleep 1; xset s off dpms 20 30 0 0
 # start blueberry app for managing bluetooth devices from tray:
 exec --no-startup-id blueberry-tray
 # transparency 
