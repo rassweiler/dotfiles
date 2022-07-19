@@ -34,6 +34,12 @@ if test -d ~/Applications/depot_tools
     end
 end
 
+# Add doom to path
+if test -d ~/.emacs.d/bin
+    if not contains -- ~/.emacs.d/bin
+       set -p PATH ~/.emacs.d/bin
+    end
+end
 
 ## Starship prompt
 if status --is-interactive

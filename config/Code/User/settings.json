@@ -3,7 +3,7 @@
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.fontFamily": "'Victor Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font','Victor Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "security.workspace.trust.untrustedFiles": "open",
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
@@ -12,6 +12,8 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "cmake.configureOnOpen": true,
+    "explorer.confirmDragAndDrop": false
 
 }

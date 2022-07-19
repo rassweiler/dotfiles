@@ -16,6 +16,7 @@
     ~/.Xresources: Xresources
     ~/.bashrc: bashrc
     ~/.gitconfig: gitconfig
+    ~/.gtkrc-2.0: gtkrc-2.0
     ~/.profile: profile
     ~/.icons: icons
     ~/.themes: themes
@@ -38,6 +39,10 @@
     ~/.FreeCAD/: 
         glob: true
         path: FreeCAD/**
+    #Doom
+    #~/.doom.d/: 
+    #    glob: true
+    #    path: doom.d/**
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

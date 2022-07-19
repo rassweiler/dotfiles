@@ -456,8 +456,10 @@ output * resolution 1920x1080 position 0,0
 #output * bg $HOME/.local/share/backgrounds/Dracula_arch.png fit
 #HDPI Monitor
 #output * scale 2
+exec --no-startup-id caffeine
 exec_always wpaperd
 exec swaync
+exec --no-startup-id autotiling
 # get auth work with polkit-gnome
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11

@@ -1,0 +1,9 @@
+gtk-icon-theme-name = "Dracula"
+gtk-theme-name = "Dracula"
+
+style "user-font"
+{
+        font_name="JetBrainsMono Nerd Font 10"
+}
+widget_class "*" style "user-font"
+gtk-font-name = "JetBrainsMono Nerd Font 10"
