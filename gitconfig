@@ -1,6 +1,7 @@
 [user]
 	email = dev@kylerassweiler.ca
 	name = Kyle Rassweiler
+	signingkey = 608F279AB78A7BE89D0BE93D20653D64DD7FF1DF
 [init]
 	defaultBranch = master
 [filter "lfs"]
