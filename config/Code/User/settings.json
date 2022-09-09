@@ -19,6 +19,8 @@
     "editor.renderWhitespace": "boundary",
     "window.zoomLevel": 1,
 	"editor.detectIndentation": false,
-	"prettier.useTabs": true
+	"prettier.useTabs": true,
+	"git.alwaysSignOff": true,
+	"git.enableCommitSigning": true
 
 }
