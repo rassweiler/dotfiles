@@ -23,6 +23,7 @@
     ~/.icons: icons
     ~/.themes: themes
     ~/.librewolf/librewolf.overrides.cfg: librewolf.overrides.cfg
+    ~/.face.icon: face.icon
     
     #Local
     ~/.local/share/: 
