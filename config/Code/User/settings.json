@@ -21,6 +21,8 @@
 	"editor.detectIndentation": false,
 	"prettier.useTabs": true,
 	"git.alwaysSignOff": true,
-	"git.enableCommitSigning": true
+	"git.enableCommitSigning": true,
+	"prettier.jsxSingleQuote": true,
+	"prettier.singleQuote": true
 
 }
