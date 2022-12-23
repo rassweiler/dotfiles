@@ -23,6 +23,9 @@
 	"git.alwaysSignOff": true,
 	"git.enableCommitSigning": true,
 	"prettier.jsxSingleQuote": true,
-	"prettier.singleQuote": true
+	"prettier.singleQuote": true,
+	"files.associations": {
+		"*.as": "Kawasaki"
+	}
 
 }
