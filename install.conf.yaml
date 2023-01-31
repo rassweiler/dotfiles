@@ -14,13 +14,16 @@
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.Xresources: Xresources
+    ~/.xinitrc: xinitrc
     ~/.bashrc: bashrc
+    ~/.bash_profile: bash_profile
     ~/.gitconfig: gitconfig
     ~/.gtkrc-2.0: gtkrc-2.0
     ~/.profile: profile
     ~/.icons: icons
     ~/.themes: themes
     ~/.librewolf/librewolf.overrides.cfg: librewolf.overrides.cfg
+    ~/.face.icon: face.icon
     
     #Local
     ~/.local/share/: 

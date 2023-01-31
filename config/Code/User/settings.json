@@ -14,6 +14,20 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "cmake.configureOnOpen": true,
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.renderWhitespace": "boundary",
+    "window.zoomLevel": 1,
+	"editor.detectIndentation": false,
+	"prettier.useTabs": true,
+	"git.alwaysSignOff": true,
+	"git.enableCommitSigning": true,
+	"prettier.jsxSingleQuote": true,
+	"prettier.singleQuote": true,
+	"files.associations": {
+		"*.as": "Kawasaki"
+	},
+	"code-runner.runInTerminal": true,
+	"code-runner.saveAllFilesBeforeRun": true
 
 }

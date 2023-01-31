@@ -1,0 +1,11 @@
+#!/bin/sh
+
+bookmark="$(xclip -o)"
+bookmarks="$HOME/Nextcloud/.bookmarks.md"
+
+if grep -q "^$bookmark$" "$bookmarks"; then
+	notify-send "Bookmark Error" "Bookmark already exists!"
+else
+	notify-send "Bookmark Success" "Bookmark $bookmark was added!"
+	echo "$bookmark" >> "$bookmarks"
+fi
