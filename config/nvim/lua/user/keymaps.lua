@@ -34,7 +34,7 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
-keymap("n", "<leader>q", ":Bdelete!", opts)
+keymap("n", "q", ":bdelete<CR>:bprevious<CR>", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
@@ -68,3 +68,14 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+
+-- DAP
+keymap("n", "<F5>", ":lua require'dap'.continue()<CR>", opts)
+keymap("n", "<F10>", ":lua require'dap'.step_over()<CR>", opts)
+keymap("n", "<F11>", ":lua require'dap'.step_into()<CR>", opts)
+keymap("n", "<F12>", ":lua require'dap'.step_out()<CR>", opts)
+keymap("n", "<Leader>B", ":lua require'dap'.toggle_breakpoint()<CR>", opts)
+keymap("n", "<Leader>C", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", opts)
+keymap("n", "<Leader>L", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", opts)
+keymap("n", "<Leader>R", ":lua require'dap'.repl.open()<CR>", opts)
+keymap("n", "<Leader>tb", ":lua require'dapui'.toggle()<CR>", opts)
