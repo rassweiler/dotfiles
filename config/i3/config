@@ -200,6 +200,7 @@ bindsym $mod+h split h
 # J
 
 # K
+bindsym $mod+shift+k exec ~/.config/i3/scripts/kill-process
 
 # L
 
