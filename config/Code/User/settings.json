@@ -28,6 +28,7 @@
 		"*.as": "Kawasaki"
 	},
 	"code-runner.runInTerminal": true,
-	"code-runner.saveAllFilesBeforeRun": true
+	"code-runner.saveAllFilesBeforeRun": true,
+	"rust-analyzer.typing.autoClosingAngleBrackets.enable": true
 
 }
