@@ -247,6 +247,8 @@ bindsym $mod+Shift+w exec /usr/bin/firefox --args -private-window
 # F1-12
 #bindsym F9 exec rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
 #bindsym F10 exec rofi -show window -config ~/.config/rofi/rofidmenu.rasi
+bindsym $mod+F9 exec ~/.config/i3/scripts/mount.sh
+bindsym $mod+F10 exec ~/.config/i3/scripts/unmount.sh
 
 # Space
 bindsym $mod+space exec rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
@@ -270,7 +272,7 @@ bindsym $mod+Tab focus mode_toggle
 bindsym $mod+Shift+Tab floating toggle
 
 # Insert
-bindsym $mod+Insert exec "xdotool type $(grep -v '^#' ~/Nextcloud/.bookmarks.md | dmenu -i -sb '#bd93f9' -l 50 | cut -d' ' -f1)"
+bindsym $mod+Insert exec "xdotool type $(grep -v '^[#\n]' ~/Nextcloud/.bookmarks.md | rofi -dmenu -config ~/.config/rofi/rofidmenu.rasi -i -sb '#bd93f9' -l 50 | cut -d' ' -f1)"
 
 # Print
 bindsym Print exec "flameshot gui"
