@@ -39,9 +39,9 @@
         glob: true
         path: config/Code/User/settings.json
     #FreeCAD
-    ~/.FreeCAD/: 
-        glob: true
-        path: FreeCAD/**
+        #~/.FreeCAD/: 
+        #   glob: true
+        #path: FreeCAD/**
     #Doom
     #~/.doom.d/: 
     #    glob: true
