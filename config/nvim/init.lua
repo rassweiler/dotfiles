@@ -61,6 +61,7 @@ require('packer').startup(function(use)
 
 	--use 'navarasu/onedark.nvim' -- Theme inspired by Atom
 	use 'Mofiqul/dracula.nvim'
+	use 'folke/tokyonight.nvim'
 	use 'nvim-lualine/lualine.nvim' -- Fancier statusline
 	use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
 	use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
@@ -85,6 +86,7 @@ require('packer').startup(function(use)
 	use 'windwp/nvim-ts-autotag'
 	use 'folke/which-key.nvim'
 	use 'habamax/vim-godot'
+	use ' MunifTanjim/prettier.nvim'
 	use {
 		"nvim-neorg/neorg",
 		run = ":Neorg sync-parsers", -- This is the important bit!
@@ -93,7 +95,7 @@ require('packer').startup(function(use)
 				-- configuration here
 				load = {
 					["core.defaults"] = {},
-					["core.norg.dirman"] = {
+					["core.dirman"] = {
 						config = {
 							workspaces = {
 								notes = "~/Nextcloud/Notes",
@@ -101,27 +103,31 @@ require('packer').startup(function(use)
 							default_workspace = "notes",
 						}
 					},
-					["core.norg.completion"] = {
+					["core.summary"] = {},
+					["core.completion"] = {
 						config = {
 							engine = "nvim-cmp",
 							name = "[Neorg]",
 						}
 					},
-					["core.norg.concealer"] = {
+					["core.concealer"] = {
 						config = {
 							folds = false,
 							icon_preset = "diamond"
 						}
 					},
-					["core.norg.qol.toc"] = {},
+					["core.qol.toc"] = {},
 					["core.integrations.nvim-cmp"] = {
+						sources = {
+							{ name = "neorg"},
+						}
 					},
-					["core.norg.esupports.indent"] = {},
-					["core.norg.esupports.metagen"] = {},
+					["core.esupports.indent"] = {},
+					["core.esupports.metagen"] = {},
 					["core.highlights"] = {},
 					["core.mode"] = {},
 					["core.keybinds"] = {},
-					["core.norg.qol.todo_items"] = {},
+					["core.qol.todo_items"] = {},
 					["core.integrations.treesitter"] = {
 						config = {
 							configure_parsers = true,
@@ -132,6 +138,18 @@ require('packer').startup(function(use)
 			}
 		end,
 	}
+	use 'nvim-tree/nvim-web-devicons'
+	use {
+  "folke/trouble.nvim",
+  requires = "nvim-tree/nvim-web-devicons",
+  config = function()
+    require("trouble").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
+}
 	-- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
 	local has_plugins, plugins = pcall(require, 'custom.plugins')
 	if has_plugins then
@@ -202,7 +220,7 @@ vim.o.shiftwidth = 2
 vim.o.tabstop = 2
 vim.o.softtabstop = 2
 vim.o.writebackup = false
-vim.o.conceallevel = 0
+vim.o.conceallevel = 2
 vim.o.hlsearch = false
 vim.o.incsearch = true
 vim.o.swapfile = false
@@ -1357,3 +1375,44 @@ which_key.setup(setup)
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+local prettier = require("prettier")
+
+prettier.setup({
+  bin = 'prettierd', -- or `'prettierd'` (v0.22+)
+  filetypes = {
+    "css",
+    "graphql",
+    "html",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "less",
+    "markdown",
+    "scss",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+  },
+  cli_options = {
+    arrow_parens = "always",
+    bracket_spacing = true,
+    bracket_same_line = false,
+    embedded_language_formatting = "auto",
+    end_of_line = "lf",
+    html_whitespace_sensitivity = "css",
+    -- jsx_bracket_same_line = false,
+    jsx_single_quote = true,
+    print_width = 80,
+    prose_wrap = "preserve",
+    quote_props = "as-needed",
+    semi = true,
+    single_attribute_per_line = false,
+    single_quote = false,
+    tab_width = 3,
+    trailing_comma = "es5",
+    use_tabs = true,
+    vue_indent_script_and_style = false,
+  },
+
+})
