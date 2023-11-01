@@ -9,6 +9,11 @@ set XDG_CONFIG_HOME "$HOME/.config"
 set XDG_CACHE_HOME "$HOME/.cache"
 set XDG_DATA_HOME "$HOME/.local/share"
 
+## Gaming
+set VKD3D_CONFIG "dxr11,dxr"
+set PROTON_ENABLE_NVAPI "1"
+set PROTON_ENABLE_NGX_UPDATER "1"
+
 ## Export variable need for qt-theme
 if type "qtile" >> /dev/null 2>&1
    set -x QT_QPA_PLATFORMTHEME "qt5ct"

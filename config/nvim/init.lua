@@ -98,7 +98,7 @@ require('packer').startup(function(use)
 					["core.dirman"] = {
 						config = {
 							workspaces = {
-								notes = "~/Nextcloud/Notes",
+								notes = "~/Cloud/Notes",
 							},
 							default_workspace = "notes",
 						}

@@ -334,6 +334,8 @@ globalkeys = gears.table.join(
         {description = "select next", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
         {description = "select previous", group = "layout"}),
+    awful.key({},"Print", function () awful.spawn("flameshot gui")                end,
+        {description = "select previous", group = "layout"}),
 
     awful.key({ modkey, "Control" }, "n",
         function ()
@@ -601,6 +603,15 @@ awful.rules.rules = {
     { rule = { class = "Lutris" },
         properties = { tag = "  "}
     },
+    { rule = { class = "steam" },
+        properties = { tag = "  ", floating = false}
+    },
+    { rule = { class = "Godot_Engine" },
+        properties = { tag = "  ", floating = false, maximized = false, type = "normal" }
+    },
+    { rule = { class = "Godot" },
+        properties = { tag = "  ", floating = false, maximized = false, type = "normal" }
+    },
     -- Add titlebars to normal clients and dialogs
     --   { rule_any = {type = { "normal", "dialog" }
 --     }, properties = { titlebars_enabled = true }
@@ -669,6 +680,9 @@ end)
 
 
 -- Autostart
+awful.spawn.once('/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1', {})
+--awful.spawn.once('pipewire', {})
+--awful.spawn.once('pipewire-pulse', {})
 awful.spawn.once("firefox", {})
 awful.spawn.once("jellyfinmediaplayer", {})
 awful.spawn.once("thunderbird", {})
@@ -676,6 +690,7 @@ awful.spawn.once('numlockx on', {})
 awful.spawn.once('nextcloud', {})
 awful.spawn.once('volumeicon', {})
 awful.spawn.once('picom', {})
+awful.spawn.once('flameshot', {})
 -- Enable sloppy focus, so that focus follows mouse.
 client.connect_signal("mouse::enter", function(c)
     c:emit_signal("request::activate", "mouse_enter", {raise = false})
