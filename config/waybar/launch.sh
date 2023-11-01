@@ -24,7 +24,7 @@ IFS=';' read -ra arrThemes <<< "$themestyle"
 echo ${arrThemes[0]}
 
 if [ ! -f ~/.config/waybar/themes${arrThemes[1]}/style.css ]; then
-    themestyle="/Dracula;/Dracula"
+    themestyle="/Default;/Default"
 fi
 
 # ----------------------------------------------------- 

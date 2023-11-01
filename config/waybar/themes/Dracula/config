@@ -22,49 +22,49 @@
 
 	// Modules Left
 	"modules-left": [
-		 "custom/appmenu",
-		 "custom/wallpaper",
-		 "custom/waybarthemes",          
-		 "wlr/taskbar",
-		 "group/quicklinks",
-		 "hyprland/window"
+		"custom/appmenu",
+		"custom/wallpaper",
+		"custom/waybarthemes",          
+		"wlr/taskbar",
+		"group/quicklinks",
+		"hyprland/window"
 	],
 
 	// Modules Center
 	"modules-center": [
-		 "hyprland/workspaces"
+		"hyprland/workspaces"
 	],
 
 	// Modules Right    
 	"modules-right": [
-		 "custom/updates",
-		 "pulseaudio",
-		 "bluetooth",
-		 "battery", 
-		 "group/hardware",
-		 "custom/cliphist",
-		 "network",
-		 "custom/exit",
-		 "clock"
+		"custom/updates",
+		"pulseaudio",
+		"bluetooth",
+		"battery", 
+		"group/hardware",
+		"custom/cliphist",
+		"network",
+		"custom/exit",
+		"clock"
 	],
 
 	// Group Quicklinks
 	"group/quicklinks": {
-		 "orientation": "horizontal",
-		 "modules": [
-			  "custom/filemanager",
-			  "custom/brave",
-		  ]
+		"orientation": "horizontal",
+		"modules": [
+			"custom/filemanager",
+			"custom/brave",
+		]
 	},
 
 	// Group Hardware
 	"group/hardware": {
-		 "orientation": "horizontal",
-		 "modules": [
-			  "disk",
-			  "cpu",
-			  "memory"
-		 ]
+		"orientation": "horizontal",
+		"modules": [
+			"disk",
+			"cpu",
+			"memory"
+		]
 	}
 }
 
