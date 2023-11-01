@@ -58,9 +58,9 @@
 	// Cliphist
 	"custom/cliphist": {
 		 "format": "",
-		 "on-click": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh",
-		 "on-click-right": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh d",
-		 "on-click-middle": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh w",
+		 "on-click": "sleep 0.1 && ~/.config/waybar/scripts/cliphist.sh",
+		 "on-click-right": "sleep 0.1 && ~/.config/waybar/scripts/cliphist.sh d",
+		 "on-click-middle": "sleep 0.1 && ~/.config/waybar/scripts/cliphist.sh w",
 		 "tooltip": false
 	},
 
@@ -70,9 +70,9 @@
 		 "tooltip-format": "{}",
 		 "escape": true,
 		 "return-type": "json",       
-		 "exec": "~/dotfiles/scripts/updates.sh",
+		 "exec": "~/.config/waybar/scripts/updates.sh",
 		 "restart-interval": 60,
-		 "on-click": "alacritty -e ~/dotfiles/scripts/installupdates.sh",
+		 "on-click": "alacritty -e ~/.config/waybar/scripts/update.sh",
 		 "tooltip": false
 	},
 	
@@ -101,7 +101,7 @@
 	// Outlook Launcher
 	"custom/outlook": {
 		 "format": "",
-		 "on-click": "brave --app=https://outlook.office.com/mail/",
+		 "on-click": "firefox --app=https://outlook.office.com/mail/",
 		 "tooltip": false
 	},
 
@@ -115,35 +115,35 @@
 	// Brave Launcher
 	"custom/brave": {
 		 "format": "",
-		 "on-click": "brave",
+		 "on-click": "firefox",
 		 "tooltip": false
 	},
 
 	// ChatGPT Launcher
 	"custom/chatgpt": {
 		 "format": "",
-		 "on-click": "brave --app=https://chat.openai.com",
+		 "on-click": "firefox --app=https://chat.openai.com",
 		 "tooltip": false
 	},
 
 	// Rofi Calculator
 	"custom/calculator": {
 		 "format": "",
-		 "on-click": "~/dotfiles/scripts/calculator.sh",
+		 "on-click": "~/.config/waybar/scripts/calc.sh",
 		 "tooltip": false
 	},
 
 	// Windows VM
 	"custom/windowsvm": {
 		 "format": "",
-		 "on-click": "~/dotfiles/scripts/launchvm.sh",
+		 "on-click": "~/.config/waybar/scripts/launchvm.sh",
 		 "tooltip": false
 	},
 
 	// Rofi Application Launcher
 	"custom/appmenu": {
 		 "format": "Apps",
-		 "on-click": "~/dotfiles/scripts/applauncher.sh",
+		 "on-click": "~/.config/waybar/scripts/apps.sh",
 		 "tooltip": false
 	},
 
