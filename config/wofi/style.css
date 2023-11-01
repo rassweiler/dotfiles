@@ -2,6 +2,9 @@ window {
 margin: 0px;
 border: 1px solid #bd93f9;
 background-color: #282a36;
+border-radius: 1rem;
+padding: 1rem;
+opacity: 0.9;
 }
 
 #input {
