@@ -1,2 +1,2 @@
 #!/bin/bash
-wofi -show drun -IG
+rofi -show drun
