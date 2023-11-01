@@ -1,12 +1,13 @@
 * {
-	font-size: 12px;
-	font-family: "Victor Mono";
+	font-family: "Jetbrains Mono", "Victor Mono", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
 	padding: 0px;
 	margin: 1px;
+	font-size: 12px;
+	border-radius: 10px;
  }
  
  window#waybar {
-	  background: rgba(0,0,0,0); 
+	  background: rgba(0,0,0,0);
 }
 
 #window {
