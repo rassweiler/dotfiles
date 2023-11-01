@@ -3,7 +3,7 @@
 #  ----------------------------------------------------- 
 # Select wallpaper
 # ----------------------------------------------------- 
-selected=$(ls -1 ~/Cloud/Photos/Wallpapers | wofi --show drun -IG)
+selected=$(ls -1 ~/Cloud/Photos/Wallpapers | wofi -dmenu -IG)
 
 if [ "$selected" ]; then
 

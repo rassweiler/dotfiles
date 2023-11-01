@@ -35,7 +35,7 @@ done
 # Show rofi dialog
 # ----------------------------------------------------- 
 listNames=${listNames::-2}
-choice=$(echo -e "$listNames" | wofi -dmenu -no-show-icons -width 30 -p "Themes" -format i) 
+choice=$(echo -e "$listNames" | wofi -dmenu -width 30 -p "Themes" -format i) 
 
 # ----------------------------------------------------- 
 # Set new theme by writing the theme information to ~/.cache/.themestyle.sh
