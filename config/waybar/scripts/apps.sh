@@ -1,2 +1,2 @@
 #!/bin/bash
-rofi -show drun
+rofi -show drun -show-icons

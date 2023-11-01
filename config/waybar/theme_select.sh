@@ -35,7 +35,7 @@ done
 # Show rofi dialog
 # ----------------------------------------------------- 
 listNames=${listNames::-2}
-choice=$(echo -e "$listNames" | wofi -dmenu -width 30 -p "Themes") 
+choice=$(echo -e "$listNames" | rofi -dmenu -config ~/.config/rofi/config-wallpaper.rasi -width 30 -p "Themes") 
 
 # ----------------------------------------------------- 
 # Set new theme by writing the theme information to ~/.cache/.themestyle.sh
