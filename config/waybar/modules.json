@@ -115,9 +115,16 @@
 	// Brave Launcher
 	"custom/brave": {
 		 "format": "",
-		 "on-click": "firefox",
+		 "on-click": "brave",
 		 "tooltip": false
 	},
+
+	// Brave Launcher
+	"custom/firefox": {
+		"format": "",
+		"on-click": "firefox",
+		"tooltip": false
+  },
 
 	// ChatGPT Launcher
 	"custom/chatgpt": {
@@ -136,7 +143,7 @@
 	// Windows VM
 	"custom/windowsvm": {
 		 "format": "",
-		 "on-click": "~/.config/waybar/scripts/launchvm.sh",
+		 "on-click": "~/.config/waybar/scripts/windows_vm.sh",
 		 "tooltip": false
 	},
 

@@ -53,7 +53,8 @@
 		"orientation": "horizontal",
 		"modules": [
 			"custom/filemanager",
-			"custom/brave",
+			//"custom/brave",
+			"custom/firefox",
 		]
 	},
 
