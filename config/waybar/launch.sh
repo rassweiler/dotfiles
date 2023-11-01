@@ -30,4 +30,4 @@ fi
 # ----------------------------------------------------- 
 # Loading the configuration and style file based on the username
 # ----------------------------------------------------- 
-waybar -c ~/dotfiles/waybar/themes${arrThemes[0]}/config -s ~/dotfiles/waybar/themes${arrThemes[1]}/style.css &
+waybar -c ~/.config/waybar/themes${arrThemes[0]}/config -s ~/.config/waybar/themes${arrThemes[1]}/style.css &
