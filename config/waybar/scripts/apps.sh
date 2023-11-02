@@ -1,2 +1,2 @@
 #!/bin/bash
-rofi -show drun -show-icons
+rofi -modi drun -show drun -show-icons -config ~/.config/rofi/config.rasi

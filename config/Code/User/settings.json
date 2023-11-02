@@ -29,6 +29,7 @@
 	},
 	"code-runner.runInTerminal": true,
 	"code-runner.saveAllFilesBeforeRun": true,
-	"rust-analyzer.typing.autoClosingAngleBrackets.enable": true
+	"rust-analyzer.typing.autoClosingAngleBrackets.enable": true,
+	"git.confirmSync": false
 
 }
