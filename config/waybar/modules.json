@@ -94,7 +94,7 @@
 	// Filemanager Launcher
 	"custom/filemanager": {
 		 "format": "",
-		 "on-click": "~/dotfiles/scripts/filemanager.sh",
+		 "on-click": "~/.config/waybar/scripts/filemanager.sh",
 		 "tooltip": false
 	},
 
