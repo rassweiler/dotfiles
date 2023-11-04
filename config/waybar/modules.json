@@ -141,10 +141,24 @@
 	},
 
 	// Windows VM
-	"custom/windowsvm": {
+	"custom/vmwindows": {
 		 "format": "",
-		 "on-click": "~/.config/waybar/scripts/windows_vm.sh",
+		 "on-click": "~/.config/waybar/scripts/vm_windows.sh",
 		 "tooltip": false
+	},
+
+	// Meeting VM
+	"custom/vmmeeting": {
+		"format": "",
+		"on-click": "~/.config/waybar/scripts/vm_meeting.sh",
+		"tooltip": false
+	},
+
+	// Test VM
+	"custom/vmtest": {
+		"format": "",
+		"on-click": "~/.config/waybar/scripts/vm_test.sh",
+		"tooltip": false
 	},
 
 	// Rofi Application Launcher

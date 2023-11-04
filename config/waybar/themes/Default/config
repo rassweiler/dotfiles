@@ -25,7 +25,7 @@
 		"custom/appmenu",
 		"custom/calculator",
 		"custom/wallpaper",
-		"custom/waybarthemes",          
+		"custom/waybarthemes",
 		"wlr/taskbar",
 		"group/quicklinks",
 		"hyprland/window"
@@ -56,6 +56,9 @@
 			"custom/filemanager",
 			//"custom/brave",
 			"custom/firefox",
+			"custom/vmwindows",
+			"custom/vmmeeting",
+			"custom/vmtest",
 		]
 	},
 
