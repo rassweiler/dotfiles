@@ -86,7 +86,7 @@
 
 	// Waybar Themes
 	"custom/waybarthemes": {
-		 "format": "",
+		 "format": "",
 		 "on-click": "~/.config/waybar/theme_select.sh",
 		 "tooltip": false
 	},
@@ -121,7 +121,7 @@
 
 	// Brave Launcher
 	"custom/firefox": {
-		"format": "",
+		"format": "",
 		"on-click": "firefox",
 		"tooltip": false
   },
@@ -156,7 +156,7 @@
 
 	// Test VM
 	"custom/vmtest": {
-		"format": "",
+		"format": "",
 		"on-click": "~/.config/waybar/scripts/vm_test.sh",
 		"tooltip": false
 	},
