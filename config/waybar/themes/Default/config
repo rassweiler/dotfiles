@@ -38,6 +38,7 @@
 		"custom/wallpaper",
 		"custom/waybarthemes",
 		"group/quicklinks",
+		"group/vms",
 	],
 
 	// Modules Center
@@ -66,6 +67,13 @@
 			"custom/filemanager",
 			//"custom/brave",
 			"custom/firefox",
+		]
+	},
+
+	// Group VMs
+	"group/vms": {
+		"orientation": "horizontal",
+		"modules": [
 			"custom/vmwindows",
 			"custom/vmmeeting",
 			"custom/vmtest",
