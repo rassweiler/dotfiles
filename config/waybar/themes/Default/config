@@ -23,7 +23,7 @@
 	// Modules Left
 	"modules-left": [
 		"custom/appmenu",
-		"custom/calculator"
+		"custom/calculator",
 		"custom/wallpaper",
 		"custom/waybarthemes",          
 		"wlr/taskbar",
