@@ -3,7 +3,7 @@
 #  ----------------------------------------------------- 
 # Select wallpaper
 # ----------------------------------------------------- 
-selected=$(ls -1 ~/Cloud/Photos/Wallpapers | wofi -dmenu -IG)
+selected=$(ls -1 ~/Cloud/Photos/Wallpapers | rofi -dmenu -config ~/.config/rofi/config-wallpaper.rasi)
 
 if [ "$selected" ]; then
 

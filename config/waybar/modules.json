@@ -72,7 +72,7 @@
 		 "return-type": "json",       
 		 "exec": "~/.config/waybar/scripts/updates.sh",
 		 "restart-interval": 60,
-		 "on-click": "alacritty -e ~/.config/waybar/scripts/update.sh",
+		 "on-click": "wezterm -e ~/.config/waybar/scripts/update.sh",
 		 "tooltip": false
 	},
 	
