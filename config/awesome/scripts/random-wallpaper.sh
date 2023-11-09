@@ -22,17 +22,12 @@ newwall=$(echo $wallpaper | sed "s|$HOME/wallpaper/||g")
 
 # ----------------------------------------------------- 
 # Set the new wallpaper
-# ----------------------------------------------------- 
-swww img $wallpaper \
-    --transition-bezier .43,1.19,1,.4 \
-    --transition-fps=60 \
-    --transition-type="random" \
-    --transition-duration=0.7 \
-    --transition-pos "$( hyprctl cursorpos )"
+# -----------------------------------------------------
+nitrogen --set-zoom-fill ~/.cache/current_wallpaper.jpg &
 
-~/.config/waybar/launch.sh
 sleep 1
 
+echo 'awesome.restart()' | awesome-client
 # ----------------------------------------------------- 
 # Send notification
 # ----------------------------------------------------- 

@@ -1,3 +1,4 @@
 #!/bin/sh
 
-#exec i3
+# Start ssh-agent if it's not alreaddy running
+[ -n "$SSH_AUTH_SOCK" ] || eval `ssh-agent`

@@ -28,16 +28,11 @@ if [ "$selected" ]; then
     # ----------------------------------------------------- 
     # Set the new wallpaper
     # ----------------------------------------------------- 
-    swww img $wallpaper \
-        --transition-bezier .43,1.19,1,.4 \
-        --transition-fps=60 \
-        --transition-type="random" \
-        --transition-duration=0.7 \
-        --transition-pos "$( hyprctl cursorpos )"
-
-    ~/.config/waybar/launch.sh
+    nitrogen --set-zoom-fill ~/.cache/current_wallpaper.jpg
+	 
     sleep 1
 
+	echo 'awesome.restart()' | awesome-client
     # ----------------------------------------------------- 
     # Send notification
     # ----------------------------------------------------- 

@@ -17,3 +17,5 @@ alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles exce
 ## (you can write some initial letters of the command first).
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
+
+export GPG_TTY=$(tty)

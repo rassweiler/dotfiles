@@ -22,8 +22,8 @@ configuration {
 /* ---- Window ---- */
 window {
     width:                        400px;
-    x-offset:                     0px;
-    y-offset:                     65px;
+    x-offset:                     -200px;
+    y-offset:                     26px;
     spacing:                      0px;
     padding:                      0px;
     margin:                       0px; 
@@ -32,8 +32,8 @@ window {
     border-color:                 #FFFFFF;
     cursor:                       "default";
     transparency:                 "real";
-    location:                     north;
-    anchor:                       north;
+    location:                     northeast;
+    anchor:                       northeast;
     fullscreen:                   false;
     enabled:                      true;
     border-radius:                10px;
