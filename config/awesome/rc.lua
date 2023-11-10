@@ -249,6 +249,9 @@ local wallpaper_widget = require("widgets.wallpaper-widget.wallpaper")
 local fs_widget = require("widgets.fs-widget.fs-widget")
 local vm_widget = require("widgets.vm-widget.vm")
 local pacman_widget = require("widgets.pacman-widget.pacman")
+local battery_widget = require("widgets.battery-widget.battery")
+local cpu_widget = require("widgets.cpu-widget.cpu-widget")
+local ram_widget = require("widgets.ram-widget.ram-widget")
 
 local windows_vm = awful.widget.button {
 	image	= config_path .. '/windows.svg',
@@ -323,8 +326,11 @@ awful.screen.connect_for_each_screen(function(s)
 				wallpaper_widget{font = "JetBrains Mono 12"},
 				pacman_widget{interval = 700, popup_bg_color = theme.bg_normal, popup_border_width = 1, popup_border_color = theme.border_color_active, popup_height = 20, popup_width = 400},
 				fs_widget(),
+				ram_widget(),
+				cpu_widget(),
 				mykeyboardlayout,
 				wibox.widget.systray(),
+				battery_widget(),
 				mytextclock,
 				logout_menu_widget{font = "JetBrains Mono 12"},
 				--s.mylayoutbox,
