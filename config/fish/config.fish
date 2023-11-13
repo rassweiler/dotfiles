@@ -1,3 +1,5 @@
+source ~/.cache/wal/colors-fish.fish
+
 ## Set values
 # Hide welcome message
 set fish_greeting
@@ -22,6 +24,8 @@ end
 # Set settings for https://github.com/franciscolourenco/done
 set -U __done_min_cmd_duration 10000
 set -U __done_notification_urgency_level low
+
+set GPG_TTY "$(tty)"
 
 
 ## Environment setup
@@ -161,9 +165,7 @@ alias jctl="journalctl -p 3 -xb"
 # Recent installed packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 
-
 ## Run paleofetch if session is interactive
 if status --is-interactive
    neofetch
 end
-

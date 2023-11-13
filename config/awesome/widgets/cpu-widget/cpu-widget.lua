@@ -92,7 +92,8 @@ local function worker(user_args)
     local step_width = args.step_width or 2
     local step_spacing = args.step_spacing or 1
     local color = args.color or beautiful.fg_normal
-    local background_color = args.background_color or "#00000000"
+    local background_color = args.background_color or beautiful.bg_normal or "#00000000"
+    local border_color = args.border_color or beautiful.border_color_normal or "#00000000"
     local enable_kill_button = args.enable_kill_button or false
     local process_info_max_length = args.process_info_max_length or -1
     local timeout = args.timeout or 1
@@ -100,6 +101,7 @@ local function worker(user_args)
     local cpugraph_widget = wibox.widget {
         max_value = 100,
         background_color = background_color,
+		  border_color = border_color,
         forced_width = width,
         step_width = step_width,
         step_spacing = step_spacing,

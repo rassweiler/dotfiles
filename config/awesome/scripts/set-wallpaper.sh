@@ -28,7 +28,7 @@ if [ "$selected" ]; then
     # ----------------------------------------------------- 
     # Set the new wallpaper
     # ----------------------------------------------------- 
-    nitrogen --set-zoom-fill ~/.cache/current_wallpaper.jpg
+    #nitrogen --set-zoom-fill ~/.cache/current_wallpaper.jpg
 	 
     sleep 1
 

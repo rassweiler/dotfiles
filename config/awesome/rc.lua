@@ -325,8 +325,8 @@ awful.screen.connect_for_each_screen(function(s)
 				vm_widget(),
 				wallpaper_widget{font = "JetBrains Mono 12"},
 				pacman_widget{interval = 700, popup_bg_color = theme.bg_normal, popup_border_width = 1, popup_border_color = theme.border_color_active, popup_height = 20, popup_width = 400},
-				fs_widget(),
-				ram_widget(),
+				fs_widget{widget_border_color = theme.border_color_normal},
+				ram_widget{widget_height = 26, widget_width = 26},
 				cpu_widget(),
 				mykeyboardlayout,
 				wibox.widget.systray(),
@@ -767,7 +767,9 @@ end)
 
 -- Autostart
 --awful.spawn.once('/usr/lib/xfce-polkit/xfce-polkit', {})
+awful.spawn.with_shell("dex -a -s /etc/xdg/autostart/:~/.config/autostart/ &",{})
 awful.spawn.with_shell("~/.config/awesome/scripts/autostart.sh &", {})
+awful.spawn.with_shell("nitrogen --set-zoom-fill ~/.cache/current_wallpaper.jpg &", {})
 awful.spawn.once('picom', {})
 awful.spawn.once('nm-applet --indicator & disown', {})
 --awful.spawn.once('pipewire', {})

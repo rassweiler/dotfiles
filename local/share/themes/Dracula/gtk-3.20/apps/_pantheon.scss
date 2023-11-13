@@ -119,31 +119,7 @@
 /*********
  * Panel *
  ********/
-
-.panel {
-  background-color: transparent;
-  transition: all 100ms ease-in-out;
-  color: #fff;
-
-  &.maximized {
-    background-color: #000;
-  }
-
-  &.translucent {
-    background-color: transparentize(black, 0.5);
-  }
-
-  &.color-light.translucent {
-    background-color: transparentize($panel_fg_color, 0.15);
-  }
-}
-
-menubar.panel,
-.panel menubar {
-    box-shadow: none;
-    border: none;
-}
-
+ 
 .composited-indicator {
 
   > revealer,
@@ -354,12 +330,8 @@ radiobutton.color-button {
       background-image: none;
       border: 1px solid rgba(black, 0.2);
       border-radius: 50%;
-      box-shadow: inset-shadow();
       color: $base_color;
       -gtk-icon-source: -gtk-icontheme("check-active-symbolic");
-      min-height: rem(12px);
-      min-width: rem(12px);
-      padding: rem(3px);
   }
 
   &.red check,

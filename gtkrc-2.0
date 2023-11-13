@@ -3,7 +3,7 @@ gtk-theme-name = "Dracula"
 
 style "user-font"
 {
-        font_name="JetBrainsMono Nerd Font 10"
+        font_name="JetBrains Mono 10"
 }
 widget_class "*" style "user-font"
-gtk-font-name = "JetBrainsMono Nerd Font 10"
+gtk-font-name = "JetBrains Mono 10"

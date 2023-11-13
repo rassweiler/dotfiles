@@ -19,9 +19,8 @@
     ~/.gitconfig: gitconfig
     ~/.gtkrc-2.0: gtkrc-2.0
     ~/.profile: profile
-    ~/.icons: icons
-    ~/.themes: themes
     ~/.face.icon: face.icon
+    ~/.ssh/config: sshconfig
     
     #Local
     ~/.local/share/: 

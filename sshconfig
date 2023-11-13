@@ -1,0 +1,12 @@
+AddKeysToAgent=true
+
+Host https://github.com
+	ForwardAgent yes
+	User rassweiler
+	IdentityFile ~/.ssh/kylerassweiler.pub
+
+Host https://git.kylerassweiler.ca
+	ForwardAgent yes
+	Port 2222
+	User kylerassweiler
+	IdentityFile ~/.ssh/kylerassweiler.pub

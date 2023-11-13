@@ -23,7 +23,7 @@ newwall=$(echo $wallpaper | sed "s|$HOME/wallpaper/||g")
 # ----------------------------------------------------- 
 # Set the new wallpaper
 # -----------------------------------------------------
-nitrogen --set-zoom-fill ~/.cache/current_wallpaper.jpg &
+#nitrogen --set-zoom-fill ~/.cache/current_wallpaper.jpg &
 
 sleep 1
 

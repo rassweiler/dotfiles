@@ -1,4 +1,0 @@
-AddKeysToAgent=true
-
-Host github.com
-	ForwardAgent yes

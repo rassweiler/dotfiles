@@ -1,7 +1,7 @@
 [user]
 	email = dev@kylerassweiler.ca
 	name = Kyle Rassweiler
-	signingkey = 608F279AB78A7BE89D0BE93D20653D64DD7FF1DF
+	signingkey = D02E4908D12D86B8E0A619A283961F82344A86FC
 [init]
 	defaultBranch = master
 [filter "lfs"]
@@ -13,3 +13,5 @@
 	directory = /home/krassweiler/dotfiles/dotbot
 	directory = /home/krassweiler/dotfiles
 	directory = /home/krassweiler/dotfiles/dotbot/lib/pyyaml
+[commit]
+	gpgsign = true
