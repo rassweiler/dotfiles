@@ -252,6 +252,7 @@ local pacman_widget = require("widgets.pacman-widget.pacman")
 local battery_widget = require("widgets.battery-widget.battery")
 local cpu_widget = require("widgets.cpu-widget.cpu-widget")
 local ram_widget = require("widgets.ram-widget.ram-widget")
+local volume_widget = require('widgets.pactl-widget.volume')
 
 local windows_vm = awful.widget.button {
 	image	= config_path .. '/windows.svg',
@@ -328,9 +329,10 @@ awful.screen.connect_for_each_screen(function(s)
 				fs_widget{widget_border_color = theme.border_color_normal},
 				ram_widget{widget_height = 26, widget_width = 26},
 				cpu_widget(),
+				battery_widget(),
+				volume_widget{widget_type = 'arc'},
 				mykeyboardlayout,
 				wibox.widget.systray(),
-				battery_widget(),
 				mytextclock,
 				logout_menu_widget{font = "JetBrains Mono 12"},
 				--s.mylayoutbox,

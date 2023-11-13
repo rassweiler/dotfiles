@@ -7,4 +7,4 @@ start() {
 #notify-send "Running autostart"
 start /usr/lib/xfce-polkit/xfce-polkit
 start nextcloud
-start volumeicon
+#start volumeicon
