@@ -253,6 +253,7 @@ local battery_widget = require("widgets.battery-widget.battery")
 local cpu_widget = require("widgets.cpu-widget.cpu-widget")
 local ram_widget = require("widgets.ram-widget.ram-widget")
 local volume_widget = require('widgets.pactl-widget.volume')
+local mpdarc_widget = require("widgets.mpdarc-widget.mpdarc")
 
 local windows_vm = awful.widget.button {
 	image	= config_path .. '/windows.svg',
@@ -325,6 +326,7 @@ awful.screen.connect_for_each_screen(function(s)
 				layout = wibox.layout.fixed.horizontal,
 				vm_widget(),
 				wallpaper_widget{font = "JetBrains Mono 12"},
+				mpdarc_widget,
 				pacman_widget{interval = 700, popup_bg_color = theme.bg_normal, popup_border_width = 1, popup_border_color = theme.border_color_active, popup_height = 20, popup_width = 400},
 				fs_widget{widget_border_color = theme.border_color_normal},
 				ram_widget{widget_height = 26, widget_width = 26},
@@ -772,7 +774,9 @@ end)
 awful.spawn.with_shell("dex -a -s /etc/xdg/autostart/:~/.config/autostart/ &",{})
 awful.spawn.with_shell("~/.config/awesome/scripts/autostart.sh &", {})
 awful.spawn.with_shell("nitrogen --set-zoom-fill ~/.cache/current_wallpaper.jpg &", {})
+awful.spawn.with_shell("numlockx on &", {})
 awful.spawn.once('picom', {})
+--awful.spawn.once('mpd', {})
 awful.spawn.once('nm-applet --indicator & disown', {})
 --awful.spawn.once('pipewire', {})
 --awful.spawn.once('pipewire-pulse', {})

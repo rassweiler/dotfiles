@@ -10,7 +10,7 @@ local config = {}
 -- Icon widget
 config.image = 'windows.svg'
 config.resize = true
-config.forced_height = 20
+config.forced_height = 18
 
 -- Margin widget
 config.color = "#aaaaaaff"
