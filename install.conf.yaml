@@ -10,8 +10,6 @@
 
 - link:
     #Home
-    ~/.vim: vim
-    ~/.vimrc: vimrc
     ~/.Xresources: Xresources
     ~/.xinitrc: xinitrc
     ~/.bashrc: bashrc
