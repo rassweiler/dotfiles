@@ -13,7 +13,8 @@ config.resize = true
 config.forced_height = 18
 
 -- Margin widget
-config.color = "#aaaaaaff"
+config.fg_normal = "#aaaaaaff"
+config.fg_focus = "#aaccccff"
 config.bg_normal = "#00000000"
 config.bg_focus = "#000000ff"
 config.margins = 4
@@ -34,22 +35,28 @@ local function worker(user_args)
 			{ -- Create Icon
 				image = ICON_DIR .. _config.image,
 				resize = _config.resize,
-				color = _config.color,
-				forced_height = _config.forced_height,
 				widget = wibox.widget.imagebox
 			},
 			margins = _config.margins,
 			widget = wibox.container.margin
 		},
 		bg = _config.bg_normal,
+		fg = _config.fg_normal,
 		widget = wibox.container.background
 	}
 
-	vm_button:connect_signal("mouse::enter", function(c) c:set_bg(_config.bg_focus) end)
-	vm_button:connect_signal("mouse::leave", function(c) c:set_bg(_config.bg_normal) end)
+	vm_button:connect_signal("mouse::enter", function(c) 
+		c:set_bg(_config.bg_focus)
+		c:set_fg(_config.fg_focus)
+	end)
+	vm_button:connect_signal("mouse::leave", function(c) 
+		c:set_bg(_config.bg_normal)
+		c:set_fg(_config.fg_normal)
+	end)
 	vm_button:connect_signal("button::press", function(c, _, _, button) 
 		if button == 1 then
 			c:set_bg(_config.bg_normal)
+			c:set_fg(_config.fg_normal)
 			awful.spawn.with_shell(SCRIPT_DIR .. _config.script, {})
 		end
 	end)
