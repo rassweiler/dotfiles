@@ -516,7 +516,13 @@ globalkeys = gears.table.join(
 	end, { description = "Volume Down", group = "media" }),
 	awful.key({}, "XF86AudioMute", function()
 		awful.util.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")
-	end, { description = "Volume Mute", group = "media" })
+	end, { description = "Volume Mute", group = "media" }),
+	awful.key({ modkey }, "d", function()
+		awful.util.spawn("mpd")
+	end, { description = "Start MPD", group = "launcher" }),
+	awful.key({ modkey }, "l", function()
+		awful.util.spawn("lutris")
+	end, { description = "Start Lutris", group = "launcher" })
 )
 
 clientkeys = gears.table.join(

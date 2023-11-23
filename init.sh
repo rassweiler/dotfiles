@@ -1,2 +1,3 @@
 #!/bin/bash
-wal -i ~/.config/swww/default_wallpaper.png
+wal -i ~/.config/awesome/wallpaper.png
+
