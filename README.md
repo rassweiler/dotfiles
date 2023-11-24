@@ -1,5 +1,8 @@
 # KR Arch Dotfiles
 
+## Sample
+[Sample Image](sample.png)
+
 ## Install
 
 ```zsh
