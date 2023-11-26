@@ -1,3 +1,23 @@
+format = """
+[](fg:#a3aed2)\
+$os\
+[](bg:#3d59a1 fg:#a3aed2)\
+$username\
+[](fg:#3d59a1 bg:#394b70)\
+$directory\
+[](fg:#394b70 bg:#394260)\
+$git_branch\
+$git_status\
+[](fg:#394260 bg:#212736)\
+$nodejs\
+$rust\
+$golang\
+$php\
+[](fg:#212736 bg:#1d2230)\
+$time\
+[ ](fg:#1d2230)\
+\n$character"""
+
 [aws]
 symbol = "  "
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
@@ -39,6 +59,10 @@ format = '\[[$symbol($version)]($style)\]'
 format = '\[[$symbol($version)]($style)\]'
 
 [directory]
+style = "fg:#e3e5e5 bg:#394b70"
+format = "[ $path ]($style)"
+truncation_length = 6
+truncation_symbol = "…/"
 read_only = " 󰌾"
 
 [docker_context]
@@ -70,11 +94,13 @@ format = '\[[$symbol$branch]($style)\]'
 format = '\[[$symbol$account(@$domain)(\($region\))]($style)\]'
 
 [git_status]
-format = '([\[$all_status$ahead_behind\]]($style))'
+style = "bg:#394260"
+format = '[[($all_status$ahead_behind )](fg:#bb9af7 bg:#394260)]($style)'
 
 [git_branch]
 symbol = " "
-format = '\[[$symbol$branch]($style)\]'
+style = "bg:#394260"
+format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
 
 [golang]
 symbol = " "
@@ -153,7 +179,8 @@ format = '\[[$symbol($version)]($style)\]'
 format = '\[[$symbol$cloud(\($project\))]($style)\]'
 
 [os]
-format = '\[[$symbol]($style)\]'
+disabled = false
+format = '[[$symbol](fg:#1f2335 bg:#a3aed2)]($style)'
 
 [os.symbols]
 Alpaquita = " "
@@ -198,23 +225,23 @@ Windows = "󰍲 "
 
 [package]
 symbol = "󰏗 "
-format = '\[[$symbol$version]($style)\]'
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
 [perl]
-format = '\[[$symbol($version)]($style)\]'
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
 [php]
-format = '\[[$symbol($version)]($style)\]'
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
 [pijul_channel]
 symbol = " "
-format = '\[[$symbol$channel]($style)\]'
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
 [pulumi]
-format = '\[[$symbol$stack]($style)\]'
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
 [purescript]
-format = '\[[$symbol($version)]($style)\]'
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
 [python]
 symbol = " "
@@ -224,18 +251,18 @@ format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
 format = '\[[$symbol($version-$vm_version)]($style)\]'
 
 [red]
-format = '\[[$symbol($version)]($style)\]'
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
 [rlang]
 symbol = "󰟔 "
 
 [ruby]
 symbol = " "
-format = '\[[$symbol($version)]($style)\]'
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
 [rust]
 symbol = " "
-format = '\[[$symbol($version)]($style)\]'
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
 [scala]
 symbol = " "
@@ -248,16 +275,23 @@ format = '\[[$symbol$environment]($style)\]'
 format = '\[[as $symbol]($style)\]'
 
 [swift]
-format = '\[[$symbol($version)]($style)\]'
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
 [terraform]
 format = '\[[$symbol$workspace]($style)\]'
 
 [time]
-format = '\[[$time]($style)\]'
+disabled = false
+time_format = "%R"                                      # Hour:Minute Format
+style = "bg:#1d2230"
+format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
 
 [username]
-format = '\[[$user]($style)\]'
+show_always = true
+style_user = "fg:#e3e5e5 bg:#3d59a1"
+style_root = "fg:#db4b4b bg:#3d59a1"
+format = '[ $user]($style)'
+disabled = false
 
 [vagrant]
 format = '\[[$symbol($version)]($style)\]'

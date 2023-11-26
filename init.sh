@@ -24,7 +24,7 @@ fi
 # Packages
 read -r -p "Install packages? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-	paru -S --needed - <packages.txt
+	paru -S --needed - < packages.txt
 fi
 
 # Greeter

@@ -1,5 +1,10 @@
-source ~/.cache/wal/colors-fish.fish
-
+#source ~/.cache/wal/colors-fish.fish
+#source ~/.config/fish/TokyoNight.fish
+#
+if status is-interactive
+    # use the coolbeans theme
+    fish_config theme choose tokyo_night
+end
 ## Set values
 # Hide welcome message
 set fish_greeting
@@ -7,18 +12,19 @@ set VIRTUAL_ENV_DISABLE_PROMPT 1
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 ## Default XDG
-set XDG_CONFIG_HOME "$HOME/.config"
-set XDG_CACHE_HOME "$HOME/.cache"
-set XDG_DATA_HOME "$HOME/.local/share"
+set -gx XDG_CONFIG_HOME "$HOME/.config"
+set -gx XDG_CACHE_HOME "$HOME/.cache"
+set -gx XDG_DATA_HOME "$HOME/.local/share"
 
 ## Gaming
 set VKD3D_CONFIG "dxr11,dxr"
 set PROTON_ENABLE_NVAPI 1
 set PROTON_ENABLE_NGX_UPDATER 1
 
-set EDITOR nvim
-set TERM wezterm
-set TerminalEmulator wezterm
+set -gx EDITOR nvim
+set -gx TERM wezterm
+set -gx TERMINAL wezterm
+set -gx TerminalEmulator wezterm
 
 ## Export variable need for qt-theme
 if type qtile >>/dev/null 2>&1
@@ -174,4 +180,3 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 if status --is-interactive
     neofetch
 end
-

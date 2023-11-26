@@ -21,6 +21,7 @@ bluez
 bluez-libs
 bluez-utils
 bridge-utils
+btop
 btrfs-progs
 celluloid
 code
@@ -36,12 +37,14 @@ dex
 device-mapper
 dhclient
 discord
+dmenu
 dnsmasq
 dracut
 dosfstools
 duf
 dunst
 ebtables
+edk2-ovmf
 efibootmgr
 efitools
 elementary-icon-theme
@@ -51,11 +54,6 @@ file-roller
 firefox
 firewalld
 flameshot
-foomatic-db-engine
-foomatic-db-gutenprint-ppds
-foomatic-db-nonfree
-foomatic-db-nonfree-ppds
-foomatic-db-ppds
 freerdp
 fsarchiver
 gc
@@ -131,6 +129,7 @@ lightdm-slick-greeter
 linux-zen
 linux-firmware
 linux-zen-headers
+lsd
 lutris
 lxappearance
 mangohud
@@ -139,6 +138,7 @@ mpc
 mpd
 mpv
 ncmpcpp
+neofetch
 neovim
 nerd-fonts
 network-manager-applet
@@ -218,7 +218,7 @@ x264
 x265
 xf86-input-libinput
 xdg-dbus-proxy
-xdg-desktop-portal
+xdg-desktop-portal-gtk
 xdg-user-dirs
 xdg-user-dirs-gtk
 xdg-utils
@@ -231,3 +231,4 @@ xorg-xinput
 xorg-xkill
 xorg-xrandr
 xvidcore
+volumeicon
