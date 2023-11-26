@@ -41,7 +41,6 @@ dracut
 dosfstools
 duf
 dunst
-dunstify
 ebtables
 efibootmgr
 efitools
@@ -130,7 +129,7 @@ libvpx
 lightdm
 lightdm-slick-greeter
 linux-zen
-linux-zen-firmware
+linux-firmware
 linux-zen-headers
 lutris
 lxappearance
@@ -172,7 +171,7 @@ python-pyqt5
 python-reportlab
 qemu-arch-extra
 qogir-gtk-theme
-qogir-icon-theme 
+qogir-icon-theme
 qt5ct
 reflector
 reflector-simple
