@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Tokyo Night",
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -7,7 +7,7 @@
     "security.workspace.trust.untrustedFiles": "open",
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
-    "editor.tabSize": 3,
+    "editor.tabSize": 2,
     "editor.insertSpaces": false,
     "editor.multiCursorModifier": "ctrlCmd",
     "[html]": {

@@ -137,6 +137,7 @@ mesa-utils
 mpc
 mpd
 mpv
+mtools
 ncmpcpp
 neofetch
 neovim
@@ -222,7 +223,6 @@ xdg-desktop-portal-gtk
 xdg-user-dirs
 xdg-user-dirs-gtk
 xdg-utils
-xfce-polkit
 xorg-server
 xorg-xbacklight
 xorg-xdpyinfo
