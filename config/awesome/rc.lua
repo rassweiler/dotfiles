@@ -369,7 +369,7 @@ awful.screen.connect_for_each_screen(function(s)
 			fs_widget({ widget_border_color = theme.border_color_normal }),
 			ram_widget({ widget_height = 26, widget_width = 26 }),
 			cpu_widget(),
-			battery_widget(),
+			battery_widget({ path_to_icons = "/usr/share/icons/Arc-X-D/status/symbolic/"}),
 			volume_widget({ widget_type = "arc" }),
 			mykeyboardlayout,
 			wibox.widget.systray(),
@@ -520,6 +520,12 @@ globalkeys = gears.table.join(
 	awful.key({ modkey }, "d", function()
 		awful.util.spawn("mpd")
 	end, { description = "Start MPD", group = "launcher" }),
+	awful.key({ modkey }, "g", function()
+		awful.util.spawn("godot")
+	end, { description = "Start Godot", group = "launcher" }),
+	awful.key({ modkey, "Shift" }, "g", function()
+		awful.util.spawn("godot --rendering-driver opengl3")
+	end, { description = "Start Godot Opengl3", group = "launcher" }),
 	awful.key({ modkey }, "l", function()
 		awful.util.spawn("lutris")
 	end, { description = "Start Lutris", group = "launcher" })
@@ -805,7 +811,7 @@ client.connect_signal("request::titlebars", function(c)
 end)
 
 -- Autostart
---awful.spawn.once('/usr/lib/xfce-polkit/xfce-polkit', {})
+-- awful.spawn.once('/usr/lib/xfce-polkit/xfce-polkit', {})
 awful.spawn.with_shell("dex -a -s /etc/xdg/autostart/:~/.config/autostart/ &", {})
 awful.spawn.with_shell("~/.config/awesome/scripts/autostart.sh &", {})
 awful.spawn.with_shell("nitrogen --set-zoom-fill ~/.cache/current_wallpaper.jpg &", {})
